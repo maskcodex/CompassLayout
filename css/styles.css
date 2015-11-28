@@ -132,6 +132,22 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+button {
+  background: black;
+  border-radius: 3px;
+  padding: 10px;
+  color: white;
+  border: none;
+  width: 270px;
+  min-width: 250px;
+  padding: 16px 32px;
+  font-size: 18px;
+  line-height: 18px; }
+
+button:hover {
+  border-color: #666;
+  background-color: #666; }
+
 .row {
   margin: 0; }
 
@@ -147,31 +163,38 @@ table {
   background-color: transparent;
   border-bottom: 1px solid rgba(255, 255, 255, 0.25); }
 
-#logo-header {
+#logo-header, #page-logo-header {
   color: white;
   font-size: 2em;
   font-weight: bold;
   position: absolute;
   left: 50px;
-  height: 80px;
+  height: 79px;
   cursor: pointer;
-  line-height: 80px; }
+  line-height: 79px; }
 
-#header-nav {
+#page-logo-header {
+  color: black; }
+
+#header-nav, #page-header-nav {
   position: absolute;
   right: 10px;
   height: 79px;
   line-height: 79px; }
-  #header-nav ul li {
+  #header-nav ul li, #page-header-nav ul li {
     float: left;
     cursor: pointer;
     padding-left: 20px;
     padding-right: 20px;
     cursor: pointer;
     box-sizing: border-box; }
-  #header-nav ul li:hover {
+  #header-nav ul li:hover, #page-header-nav ul li:hover {
     border-bottom: solid 2px #fff;
     color: #ccc; }
+
+#page-header-nav ul li:hover {
+  border-bottom: solid 2px black;
+  color: #ccc; }
 
 #header-background {
   display: table;
@@ -292,6 +315,13 @@ table {
     display: inline-block;
     padding: 5px; }
 
+.listing-block-featured {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400; }
+  .listing-block-featured div {
+    display: inline-block;
+    padding: 5px; }
+
 .block-street-info {
   padding-top: 16px;
   padding-bottom: 3px;
@@ -335,7 +365,7 @@ table {
   position: relative;
   color: black;
   background: white;
-  height: 55px; }
+  height: 81px; }
 
 .agent-page-content {
   margin: 0 auto;
@@ -388,6 +418,25 @@ table {
 .block-agent-mobile {
   color: #848484; }
 
+.listing-page {
+  position: relative; }
+
+.contact-agent-mobile {
+  margin-left: 2%;
+  width: 96%;
+  position: fixed;
+  bottom: 15px;
+  background: black;
+  border-radius: 3px;
+  padding: 10px;
+  color: white;
+  border: solid 1px white;
+  padding: 16px 32px;
+  font-size: 18px;
+  line-height: 18px;
+  text-align: center;
+  display: none; }
+
 .listing-page-content {
   background: #eee; }
 
@@ -398,7 +447,7 @@ table {
 
 .listing-adress-block {
   width: 100%;
-  height: 156px;
+  min-height: 156px;
   background: white;
   border-bottom: solid 2px black;
   margin-bottom: 50px; }
@@ -413,21 +462,58 @@ table {
   font-family: "Tiempos Text", Times, "Times New Roman", serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 28px; }
+  font-size: 18px;
+  line-height: 30px; }
 
 .adress-info h1 {
   font-size: 36px;
   font-family: "Tiempos Headline", Times, "Times New Roman", serif;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 600;
   min-height: 50px;
   line-height: 40px;
-  word-wrap: break-word; }
+  word-wrap: break-word;
+  margin-bottom: 5px; }
+
+.adress-action {
+  font-family: 'Roboto', Helvetica, Arial, sans-serif;
+  float: right; }
+  .adress-action p {
+    color: black;
+    font-weight: bold;
+    border: none;
+    width: 270px;
+    min-width: 250px;
+    padding: 16px 32px;
+    font-size: 18px;
+    line-height: 18px;
+    cursor: pointer;
+    text-align: center; }
+
+.key-style {
+  font-weight: 600;
+  font-size: 24px; }
+
+.key-text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px; }
+
+.overview {
+  font-family: "Tiempos Text",Times,"Times New Roman",serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px; }
+
+.gray-style {
+  color: #848484; }
 
 .listing-key-detail-block {
   width: 100%;
-  background: white; }
+  background: white;
+  border-top: solid 1px #ccc; }
 
 .listing-block {
   position: relative;
@@ -438,7 +524,8 @@ table {
   padding: 60px 15px;
   min-height: 140px;
   margin: 0 auto;
-  max-width: 1200px; }
+  max-width: 1200px;
+  font-family: 'Roboto', Helvetica, Arial, sans-serif; }
 
 .listing-agent-block {
   width: 100%;
@@ -450,7 +537,13 @@ table {
   font-family: "Harmonia Sans", Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: 600;
-  text-align: center; }
+  text-align: center;
+  padding: 30px;
+  line-height: 40px; }
+
+.neighborhood-img img {
+  width: 100%;
+  height: auto; }
 
 .listing-agent-text {
   max-width: 768px;
@@ -575,7 +668,29 @@ table {
     display: none; }
 
   .footer-block1 {
-    text-align: center; } }
+    text-align: center; }
+
+  .adress-action {
+    display: none; }
+
+  .listing-agent-info {
+    max-width: 290px;
+    max-height: 650px;
+    margin: 0 auto;
+    border: 1px solid #e7e8e7;
+    background-color: #fff; }
+    .listing-agent-info img {
+      width: 290px;
+      height: 290px;
+      margin-left: 0px; }
+    .listing-agent-info div.agent-image {
+      padding: 0; }
+    .listing-agent-info .listing-agent-detail {
+      padding: 15px; }
+
+  .contact-agent-mobile {
+    display: block;
+    cursor: pointer; } }
 /* iPads (portrait and landscape) ----------- */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
   /* Styles */ }
