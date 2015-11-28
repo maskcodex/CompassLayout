@@ -4,22 +4,91 @@
   -webkit-transition-duration: 200ms; }
 
 body {
-  background: white;
-  -webkit-font-smoothing: antialiased; }
+  background: #f3f3f3;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Roboto', Helvetica, Arial, sans-serif; }
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-table, caption, tbody, tfoot, thead, tr, th, td,
-fieldset, form, label, legend,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+fieldset,
+form,
+label,
+legend,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -28,21 +97,34 @@ time, mark, audio, video {
   vertical-align: baseline; }
 
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
   display: block; }
 
 body {
   line-height: 1.4em; }
 
-ol, ul {
+ol,
+ul {
   list-style: none; }
 
-blockquote, q {
+blockquote,
+q {
   quotes: none; }
 
-blockquote:before, blockquote:after,
-q:before, q:after {
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
   content: '';
   content: none; }
 
@@ -50,13 +132,20 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+.row {
+  margin: 0; }
+
+.row > div {
+  padding: 5px; }
+
 #header {
   position: absolute;
   z-index: 500;
   width: 100%;
-  height: 85px;
+  height: 80px;
   color: white;
-  border-bottom: solid 1px #ccc; }
+  background-color: transparent;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25); }
 
 #logo-header {
   color: white;
@@ -64,22 +153,25 @@ table {
   font-weight: bold;
   position: absolute;
   left: 50px;
-  height: 65px;
-  line-height: 65px;
-  top: 10px; }
+  height: 80px;
+  cursor: pointer;
+  line-height: 80px; }
 
 #header-nav {
   position: absolute;
   right: 10px;
-  height: 65px;
-  line-height: 65px; }
+  height: 79px;
+  line-height: 79px; }
   #header-nav ul li {
     float: left;
     cursor: pointer;
     padding-left: 20px;
-    padding-right: 20px; }
+    padding-right: 20px;
+    cursor: pointer;
+    box-sizing: border-box; }
   #header-nav ul li:hover {
-    border-bottom: solid 2px #ccc; }
+    border-bottom: solid 2px #fff;
+    color: #ccc; }
 
 #header-background {
   display: table;
@@ -105,9 +197,9 @@ table {
   margin: 0 auto;
   margin-bottom: 20px;
   font-size: 52px;
-  font-family: "Tiempos Headline",Times,"Times New Roman",serif;
+  font-family: "Tiempos Headline", Times, "Times New Roman", serif;
   font-style: normal;
-  font-weight: 400;
+  font-weight: bold;
   line-height: 52px; }
 
 #info-header-action {
@@ -120,7 +212,7 @@ table {
     width: 100%;
     height: 75px;
     padding: 20px;
-    font-family: "Harmonia Sans",Helvetica,Arial,sans-serif;
+    font-family: "Harmonia Sans", Helvetica, Arial, sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
@@ -142,24 +234,31 @@ table {
 
 #home-content {
   margin: 0 auto;
-  max-width: 1170px;
+  max-width: 1170;
   background: #f3f3f3; }
 
-#exclusive-block, #home-listing-group {
-  max-width: 600px;
+#exclusive-block {
+  max-width: 100%;
+  margin: 0 auto;
+  padding-top: 40px;
+  text-align: center; }
+
+#home-listing-group {
+  max-width: 100%;
   margin: 0 auto;
   padding-top: 40px;
   text-align: center; }
 
 .exclusive-heading {
   font-size: 40px;
-  font-family: "Harmonia Sans",Helvetica,Arial,sans-serif;
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
   font-style: normal;
-  font-weight: 600;
-  margin-bottom: 30px; }
+  font-weight: 400;
+  margin-bottom: 30px;
+  line-height: 40px; }
 
 .exclusive-text {
-  font-family: "Harmonia Sans",Helvetica,Arial,sans-serif;
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -173,13 +272,46 @@ table {
   cursor: pointer; }
 
 .block-image {
-  height: 190px;
-  width: 100%;
+  height: 380px;
+  width: 569px;
   background-size: cover;
   background-position: center center;
   background-color: #f3f3f3;
   display: table;
   background-image: url("../images/2015/09/640x4802-320x300.jpg"); }
+
+.block-info,
+.block-featured {
+  text-align: left; }
+
+.block-featured {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  padding-left: 9px; }
+  .block-featured div {
+    display: inline-block;
+    padding: 5px; }
+
+.block-street-info {
+  padding-top: 16px;
+  padding-bottom: 3px;
+  font-size: 18px;
+  padding-left: 14px;
+  line-height: 16px;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 700; }
+
+.block-dir-info {
+  height: 35px;
+  padding-bottom: 16px;
+  padding-top: 3px;
+  font-size: 16px;
+  padding-left: 14px;
+  line-height: 16px;
+  font-family: 'Roboto', Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400; }
 
 #footer {
   background: black;
@@ -189,11 +321,14 @@ table {
 #wrap-footer {
   margin: 0 auto;
   max-width: 1170px;
-  margin-top: 20px; }
+  margin-top: 20px;
+  padding: 50px 20px 50px 20px; }
 
 .footer-info {
   border-bottom: solid 2px white;
-  padding: 20px; }
+  font-family: 'Roboto', Helvetica, Arial, sans-serif;
+  line-height: 35px;
+  font-weight: 400; }
 
 #page-header {
   width: 100%;
@@ -212,7 +347,7 @@ table {
 
 .h3-title {
   font-size: 40px;
-  font-family: "Harmonia Sans",Helvetica,Arial,sans-serif;
+  font-family: "Harmonia Sans", Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: 600;
   text-align: center;
@@ -220,7 +355,7 @@ table {
   line-height: 40px; }
 
 .text-default {
-  font-family: "Harmonia Sans",Helvetica,Arial,sans-serif;
+  font-family: "Harmonia Sans", Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -275,7 +410,7 @@ table {
   max-width: 1200px; }
 
 .adress-info h2 {
-  font-family: "Tiempos Text",Times,"Times New Roman",serif;
+  font-family: "Tiempos Text", Times, "Times New Roman", serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -283,7 +418,7 @@ table {
 
 .adress-info h1 {
   font-size: 36px;
-  font-family: "Tiempos Headline",Times,"Times New Roman",serif;
+  font-family: "Tiempos Headline", Times, "Times New Roman", serif;
   font-style: normal;
   font-weight: 400;
   min-height: 50px;
@@ -312,7 +447,7 @@ table {
 
 .listing-agent-title {
   font-size: 40px;
-  font-family: "Harmonia Sans",Helvetica,Arial,sans-serif;
+  font-family: "Harmonia Sans", Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: 600;
   text-align: center; }
@@ -400,3 +535,136 @@ table {
   bottom: 0;
   top: 150px;
   background: #ccc; }
+
+/*--------------------- REPONSIVE --------------------------*/
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  /* Styles */
+  #home-content {
+    max-width: 300px; }
+
+  #home-listing-group {
+    max-width: 300px; }
+
+  .block-image {
+    height: 190px;
+    width: 290px; }
+
+  .footer-block2, .footer-block3 {
+    display: none; }
+
+  .footer-block1 {
+    text-align: center; } }
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width: 321px) {
+  /* Styles */ }
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width: 768px) {
+  /* Styles */
+  #home-content {
+    max-width: 300px; }
+
+  #home-listing-group {
+    max-width: 300px; }
+
+  .block-image {
+    height: 190px;
+    width: 290px; }
+
+  .footer-block2, .footer-block3 {
+    display: none; }
+
+  .footer-block1 {
+    text-align: center; } }
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  /* Styles */ }
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+  /* Styles */
+  #home-content {
+    width: 600px; }
+
+  #home-listing-group {
+    max-width: 600px; }
+
+  .block-image {
+    height: 190px;
+    width: 290px; } }
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+  /* Styles */ }
+/**********
+iPad 3
+**********/
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+  /* Styles */
+  #home-content {
+    width: 600px; }
+
+  #home-listing-group {
+    max-width: 600px; }
+
+  .block-image {
+    height: 190px;
+    width: 290px; } }
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+  /* Styles */
+  #home-content {
+    width: 600px; }
+
+  #home-listing-group {
+    max-width: 600px; } }
+/* Desktops and laptops ----------- */
+@media only screen and (min-width: 1224px) {
+  #home-content {
+    width: 1170px; }
+
+  #home-listing-group {
+    max-width: 1170px; }
+
+  .block-image {
+    height: 380px;
+    width: 569px; }
+
+  .exclusive-text {
+    max-width: 50%;
+    margin: 0 auto; } }
+/* Large screens ----------- */
+@media only screen and (min-width: 1824px) {
+  /* Styles */ }
+/* iPhone 4 ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+  /* Styles */ }
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+  /* Styles */ }
+/* iPhone 5 ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
+  /* Styles */ }
+@media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
+  /* Styles */ }
+/* iPhone 6 ----------- */
+@media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
+  /* Styles */ }
+@media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
+  /* Styles */ }
+/* iPhone 6+ ----------- */
+@media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
+  /* Styles */ }
+@media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
+  /* Styles */ }
+/* Samsung Galaxy S3 ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
+  /* Styles */ }
+@media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
+  /* Styles */ }
+/* Samsung Galaxy S4 ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
+  /* Styles */ }
+@media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
+  /* Styles */ }
+/* Samsung Galaxy S5 ----------- */
+@media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
+  /* Styles */ }
+@media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
+  /* Styles */ }
