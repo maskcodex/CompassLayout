@@ -168,7 +168,8 @@ button:hover {
   padding: 15px;
   margin-top: 10px !important;
   background: #fff;
-  color: #000; }
+  color: #000;
+  display: none; }
 
 .border-bottom {
   border-bottom: solid 1px #e7e8e7; }
@@ -629,10 +630,10 @@ button:hover {
 
 .multi-search-block {
   width: 100%;
-  min-height: 80px;
+  min-height: 60px;
   background: #fff;
   border-bottom: solid 1px #e8e8e8;
-  padding: 25px 40px; }
+  padding: 15px 40px; }
   .multi-search-block select, .multi-search-block .dropdown {
     height: 49px;
     width: 100%;
@@ -652,25 +653,30 @@ button:hover {
     cursor: pointer; }
 
 .listings_results_content {
-  position: relative; }
+  position: relative;
+  width: 100%; }
 
 .listings_results_column {
-  padding: 10px 35px 20px 35px !important; }
+  padding: 10px 35px 20px 35px !important;
+  width: 999px;
+  float: left; }
 
 .listings_map_column {
   position: fixed;
-  right: 0;
-  top: 0;
-  bottom: 0; }
-
-.map-multi-search {
-  position: absolute;
-  width: 100%;
+  left: 1000px;
   right: 0;
   bottom: 0;
-  top: 150px;
+  top: 180px; }
+
+.map-multi-search {
+  width: 100%;
+  height: 100%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  top: 0;
   background: #ccc;
-  display: none; }
+  z-index: -1; }
 
 .dropdown {
   text-align: center;
@@ -741,7 +747,11 @@ button:hover {
   border-bottom: solid 2px black;
   margin-bottom: 20px;
   cursor: pointer;
-  font-family: 'Roboto', Helvetica, Arial, sans-serif; }
+  font-family: 'Roboto', Helvetica, Arial, sans-serif;
+  float: left;
+  width: 290px;
+  margin-right: 8px;
+  margin-left: 8px; }
 
 .search-listing-block .block-image {
   width: 100%;
@@ -800,6 +810,27 @@ button:hover {
 /* Smartphones (landscape) ----------- */
 @media only screen and (min-width: 321px) {
   /* Styles */ }
+@media only screen and (max-width: 480px) {
+  .listings_results_column {
+    padding: 10px 35px 20px 35px !important;
+    width: 100%;
+    float: left;
+    margin: 0 auto; }
+
+  .listings_map_column {
+    position: relative;
+    width: 100%;
+    display: none; }
+    .listings_map_column div {
+      position: relative; }
+
+  .listings_results_column {
+    width: 100%;
+    float: left; }
+
+  .listings_results_column .search-listing-block {
+    margin: 20px auto;
+    float: none; } }
 /* Smartphones (portrait) ----------- */
 @media only screen and (max-width: 768px) {
   /* Styles */
@@ -839,7 +870,45 @@ button:hover {
 
   .contact-agent-mobile {
     display: block;
-    cursor: pointer; } }
+    cursor: pointer; }
+
+  .listings_results_column {
+    width: 360px;
+    float: left; }
+
+  .listings_results_column .search-listing-block {
+    margin: 20px auto;
+    float: none; }
+
+  .listings_map_column {
+    left: 360px;
+    right: 0;
+    top: 180px;
+    bottom: 0; } }
+@media only screen and (max-width: 1024px) and (min-width: 768px) {
+  .listings_results_column {
+    width: 690px;
+    float: left; }
+
+  .listings_map_column {
+    position: fixed;
+    left: 670px;
+    right: 0;
+    top: 180px;
+    bottom: 0; } }
+@media only screen and (min-device-width: 480px) and (max-device-width: 768px) {
+  /* Styles */
+  .listings_results_column {
+    padding: 10px 35px 20px 35px !important;
+    width: 360px;
+    float: left; }
+
+  .listings_map_column {
+    position: fixed;
+    left: 360px;
+    right: 0;
+    top: 180px;
+    bottom: 0; } }
 /* iPads (portrait and landscape) ----------- */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
   /* Styles */ }
@@ -893,7 +962,19 @@ iPad 3
 
   .exclusive-text {
     max-width: 50%;
-    margin: 0 auto; } }
+    margin: 0 auto; }
+
+  .listings_results_column {
+    padding: 10px 35px 20px 35px !important;
+    width: 990px;
+    float: left; }
+
+  .listings_map_column {
+    position: fixed;
+    left: 970px;
+    right: 0;
+    top: 180px;
+    bottom: 0; } }
 /* Large screens ----------- */
 @media only screen and (min-width: 1824px) {
   /* Styles */ }
