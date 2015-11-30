@@ -16,11 +16,11 @@
 
 <body>
     <div id="wrap">
-        <header id="page-header" rol="header">
-            <div id="logo-header">
+        <header id="page-header" rol="header" class="border-bottom">
+            <div id="page-logo-header">
                 <p>Compass</p>
             </div>
-            <nav id="header-nav">
+            <nav id="page-header-nav">
                 <ul>
                     <li>Our Agents</li>
                     <li>Buy</li>
@@ -36,26 +36,183 @@
             <div class="row multi-search-block">
                 <div class="col-sm-8">
                     <div class="col-sm-3">
-                        <select>ABC</select>
+                        <input class="dropdown" type="text" placeholder="Select Neighborh">
                     </div>
                     <div class="col-sm-3">
-                        <select>ABC</select>
+                        <div class="dropdown">Beds
+                            <ul class="popup checklist">
+                                <li><input type="checkbox"><label>Studio</label></li>
+                                <li><input type="checkbox"><label>1 Bedroom</label></li>
+                                <li><input type="checkbox"><label>2 Bedrooms</label></li>
+                                <li><input type="checkbox"><label>3 Bedrooms</label></li>
+                                <li><input type="checkbox"><label>4 Bedrooms</label></li>
+                                <li><input type="checkbox"><label>5+ Bedrooms</label></li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="col-sm-3">
-                        <select>ABC</select>
+                        <div class="dropdown">Price
+                            <ul class="popup price_selection">
+                                <input type="text" placeholder="Minimum">
+                                <span>To:</span>
+                                <input type="text" placeholder="Maximum">
+                            </ul>
+                        </div>
                     </div>
                     <div class="col-sm-3">
-                        <select>ABC</select>
+                        <div class="dropdown">More
+                            <ul class="popup features features-filters" id="features-filters" style="max-height: 358px; display: block;">
+          <a href="#" class="c0-icon c0-icon--close search1506-closeFeaturesFiltersBtn"></a>
+          <table id="filters-table">
+            <tbody>
+            <tr>
+</tr><tr class="sales_filter">
+  <td>
+    <li><em>Bathrooms</em></li>
+
+    <ul id="filter_baths" class="search1506-radioList">
+      <li><input type="radio" name="min_bathrooms" value="1" id="br1" checked="checked"><label for="br1">1+</label></li>
+      <li><input type="radio" name="min_bathrooms" value="1.5" id="br1.5"><label for="br1.5">1.5+</label></li>
+      <li><input type="radio" name="min_bathrooms" value="2" id="br2"><label for="br2">2+</label></li>
+      <li><input type="radio" name="min_bathrooms" value="3" id="br3"><label for="br3">3+</label></li>
+      <li><input type="radio" name="min_bathrooms" value="4" id="br4"><label for="br4">4+</label></li>
+    </ul>
+  </td><td>
+      <li><em>Minimum Square Footage</em></li>
+      <input id="min_square_footage" type="text" name="min_square_footage" placeholder="Enter an amount" pattern="[0-9]*" required="">
+    </td>
+  
+</tr>
+<tr><td>
+      <li><em>Features</em></li>
+
+      <table class="features-table checklist">
+        <tbody><tr>
+          <td>
+            <li>
+              <input type="checkbox" name="features[]" value="Central A/C" id="id_central_ac">
+              <label for="id_central_ac">Central A/C</label>
+            </li>
+          </td>
+          <td>
+            <li>
+              <input type="checkbox" name="features[]" value="Tennis Court" id="id_tennis_court">
+              <label for="id_tennis_court">Tennis Court</label>
+            </li>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <li>
+              <input type="checkbox" name="features[]" value="Garage" id="id_garage">
+              <label for="id_garage">Garage</label>
+            </li>
+          </td>
+          <td>
+            <li>
+              <input type="checkbox" name="features[]" value="Waterfront" id="id_Waterfront">
+              <label for="id_Waterfront">Waterfront</label>
+            </li>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <li>
+              <input type="checkbox" name="features[]" value="Pool" id="id_pool">
+              <label for="id_pool">Pool</label>
+            </li>
+          </td>
+          <td>
+            <li>
+              <input type="checkbox" name="features[]" value="Water Views" id="id_waterviews">
+              <label for="id_waterviews">Water Views</label>
+            </li>
+          </td>
+        </tr>
+      </tbody></table>
+    </td>
+    <td>
+      <li><em>Property Type</em></li>
+      <table class="features-table checklist">
+        <tbody><tr>
+          <td>
+            <li>
+              <input type="checkbox" name="building_ownership[]" value="Condo" id="own_condo">
+              <label for="own_condo">Condo</label>
+            </li>
+          </td>
+          <td>
+            <li>
+              <input type="checkbox" name="building_ownership[]" value="Multi Family" id="own_multifamily">
+              <label for="own_multifamily">Multi Family</label>
+            </li>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <li>
+              <input type="checkbox" name="building_ownership[]" value="Co-op" id="own_co_op">
+              <label for="own_co_op">Co-op</label>
+            </li>
+          </td>
+          <td>
+            <li>
+              <input type="checkbox" name="building_ownership[]" value="Townhouse" id="own_townhouse">
+              <label for="own_townhouse">Townhouse</label>
+            </li>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <li>
+              <input type="checkbox" name="building_ownership[]" value="Single Family" id="own_singlefamily">
+              <label for="own_singlefamily">Single Family</label>
+            </li>
+          </td>
+        </tr>
+      </tbody></table>
+    </td>
+
+  
+</tr>
+
+<tr>
+  <td>
+  </td>
+
+  <td class="ownership search1506-ownership">
+    <li><em>Listing Type</em></li>
+
+    <table class="checklist">
+      <tbody><tr>
+        <td>
+          <li>
+            <input type="checkbox" name="exclusives" value="1" id="id_Exclusives">
+            <label for="id_Exclusives">Compass Listings</label>
+          </li>
+        </td>
+      </tr>
+    </tbody></table>
+  </td>
+</tr>
+
+            
+
+            
+          
+          </tbody></table>
+        </ul>
+                        </div>
                     </div>
                 </div>
                 <div class="col-sm-4 ">
                     <div class="view-toggle">
                         <ul>
                             <li>
-                                <button>Show Map</button>
+                                Map
                             </li>
                             <li>
-                                <button>Show List</button>
+                                List
                             </li>
                         </ul>
                     </div>
@@ -64,89 +221,101 @@
             <div class="search-container">
                 <div class="listings_results_content row">
                     <div class="listings_results_column col-sm-8">
-                        <div class="search-filter-in"></div>
+                        <div class="search_filter_secondary row">
+                            <div class="search_results_sort_by_wrapper">
+                                <select class="search_results_sort_by">
+                                    <option>Sort by price</option>
+                                    <option>Sort by price</option>
+                                    <option>Sort by price</option>
+                                </select>
+                            </div>
+                            <div class="simple_pagination_container">
+                                <div class="search_results_stats">1 — 12 of 30 listings</div>
+                                <ul class="navigation">
+                                    <li>1</li>
+                                    <li>2</li>
+                                </ul>
+                            </div>
+                            <div class="clr"></div>
+                        </div>
                         <div class="listing-results row">
                             <div class="col-sm-4">
-                                <div class="home-listing-block">
+                                <div class="search-listing-block">
                                     <div class="block-image"></div>
                                     <div class="block-info">
-                                        <p>100 Pierrepont Street</p>
-                                        <p>Brooklyn Heights</p>
+                                        <p class="block-street-info">100 Pierrepont Street</p>
+                                        <p class="block-dir-info">Brooklyn Heights</p>
                                     </div>
-                                    <div class="block-featured row">
-                                        <div class="col-sm-3">5 BD</div>
-                                        <div class="col-sm-3">6 BA</div>
-                                        <div class="col-sm-6">$11,250,000</div>
+                                    <div class="block-featured">
+                                        <div>5 BD</div>
+                                        <div>6 BA</div>
+                                        <div>$11,250,000</div>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-sm-4">
-                                <div class="home-listing-block">
+                                <div class="search-listing-block">
                                     <div class="block-image"></div>
                                     <div class="block-info">
-                                        <p>100 Pierrepont Street</p>
-                                        <p>Brooklyn Heights</p>
+                                        <p class="block-street-info">100 Pierrepont Street</p>
+                                        <p class="block-dir-info">Brooklyn Heights</p>
                                     </div>
-                                    <div class="block-featured row">
-                                        <div class="col-sm-3">5 BD</div>
-                                        <div class="col-sm-3">6 BA</div>
-                                        <div class="col-sm-6">$11,250,000</div>
+                                    <div class="block-featured">
+                                        <div>5 BD</div>
+                                        <div>6 BA</div>
+                                        <div>$11,250,000</div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-sm-4">
-                                <div class="home-listing-block">
+                            </div><div class="col-sm-4">
+                                <div class="search-listing-block">
                                     <div class="block-image"></div>
                                     <div class="block-info">
-                                        <p>100 Pierrepont Street</p>
-                                        <p>Brooklyn Heights</p>
+                                        <p class="block-street-info">100 Pierrepont Street</p>
+                                        <p class="block-dir-info">Brooklyn Heights</p>
                                     </div>
-                                    <div class="block-featured row">
-                                        <div class="col-sm-3">5 BD</div>
-                                        <div class="col-sm-3">6 BA</div>
-                                        <div class="col-sm-6">$11,250,000</div>
+                                    <div class="block-featured">
+                                        <div>5 BD</div>
+                                        <div>6 BA</div>
+                                        <div>$11,250,000</div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-sm-4">
-                                <div class="home-listing-block">
+                            </div><div class="col-sm-4">
+                                <div class="search-listing-block">
                                     <div class="block-image"></div>
                                     <div class="block-info">
-                                        <p>100 Pierrepont Street</p>
-                                        <p>Brooklyn Heights</p>
+                                        <p class="block-street-info">100 Pierrepont Street</p>
+                                        <p class="block-dir-info">Brooklyn Heights</p>
                                     </div>
-                                    <div class="block-featured row">
-                                        <div class="col-sm-3">5 BD</div>
-                                        <div class="col-sm-3">6 BA</div>
-                                        <div class="col-sm-6">$11,250,000</div>
+                                    <div class="block-featured">
+                                        <div>5 BD</div>
+                                        <div>6 BA</div>
+                                        <div>$11,250,000</div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-sm-4">
-                                <div class="home-listing-block">
+                            </div><div class="col-sm-4">
+                                <div class="search-listing-block">
                                     <div class="block-image"></div>
                                     <div class="block-info">
-                                        <p>100 Pierrepont Street</p>
-                                        <p>Brooklyn Heights</p>
+                                        <p class="block-street-info">100 Pierrepont Street</p>
+                                        <p class="block-dir-info">Brooklyn Heights</p>
                                     </div>
-                                    <div class="block-featured row">
-                                        <div class="col-sm-3">5 BD</div>
-                                        <div class="col-sm-3">6 BA</div>
-                                        <div class="col-sm-6">$11,250,000</div>
+                                    <div class="block-featured">
+                                        <div>5 BD</div>
+                                        <div>6 BA</div>
+                                        <div>$11,250,000</div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-sm-4">
-                                <div class="home-listing-block">
+                            </div><div class="col-sm-4">
+                                <div class="search-listing-block">
                                     <div class="block-image"></div>
                                     <div class="block-info">
-                                        <p>100 Pierrepont Street</p>
-                                        <p>Brooklyn Heights</p>
+                                        <p class="block-street-info">100 Pierrepont Street</p>
+                                        <p class="block-dir-info">Brooklyn Heights</p>
                                     </div>
-                                    <div class="block-featured row">
-                                        <div class="col-sm-3">5 BD</div>
-                                        <div class="col-sm-3">6 BA</div>
-                                        <div class="col-sm-6">$11,250,000</div>
+                                    <div class="block-featured">
+                                        <div>5 BD</div>
+                                        <div>6 BA</div>
+                                        <div>$11,250,000</div>
                                     </div>
                                 </div>
                             </div>
