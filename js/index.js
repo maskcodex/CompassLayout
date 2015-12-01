@@ -1,5 +1,4 @@
 $(document).ready(function(){
-  console.log("av=bcd");
 
   $("#bed-search-filter").click(function(){
     $(this).find(".popup").toggle();
@@ -42,4 +41,33 @@ $(document).ready(function(){
       $(".listings_map_column").css("top","180px");
     }
   });
+
+  $("#mobile-header-nav-icon").click(function(){
+    console.log("test");
+    var width = $( window ).width(),
+        left = width - 280 + 20;
+    $("#mobile-header-nav").css("display","block");
+
+    $("#mobile-header-nav > ul").animate({
+        left: left +"px", 
+      }, 100,'linear', function() {
+        // Animation complete.
+      });
+    $('html, body').css({
+        'overflow': 'hidden',
+        'height': '100%'
+    });
+  });
+
+    $("#left-bg").click(function(){
+      $("#mobile-header-nav > ul").animate({
+          left: "100%",
+        }, 300,'linear', function() {
+          $("#mobile-header-nav").css("display","none");
+        });
+      $('html, body').css({
+          'overflow': 'auto',
+          'height': 'auto'
+      });
+    });
 });
