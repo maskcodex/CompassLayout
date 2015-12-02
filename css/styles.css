@@ -387,7 +387,7 @@ button:hover {
 
 .block-image {
   height: 380px;
-  width: 569px;
+  width: 575px;
   background-size: cover;
   background-position: center center;
   background-color: #f3f3f3;
@@ -547,14 +547,11 @@ button:hover {
   background: #eee;
   overflow: hidden; }
   .listing-silder img {
-    float: left;
     height: 100%; }
 
 .listing-silder-container {
-  width: 2000px;
   height: 100%;
-  overflow-x: scroll;
-  overflow-y: hidden;
+  width: 100%;
   cursor: pointer; }
 
 .listing-adress-block {
@@ -704,7 +701,9 @@ button:hover {
   min-height: 60px;
   background: #fff;
   border-bottom: solid 1px #e8e8e8;
-  padding: 15px 40px; }
+  padding: 15px 40px;
+  z-index: 200;
+  position: relative; }
   .multi-search-block select, .multi-search-block .dropdown {
     height: 49px;
     width: 100%;
@@ -737,7 +736,8 @@ button:hover {
   left: 1000px;
   right: 0;
   bottom: 0;
-  top: 180px; }
+  top: 100px;
+  z-index: 100; }
 
 .map-multi-search {
   width: 100%;
@@ -746,8 +746,7 @@ button:hover {
   bottom: 0;
   left: 0;
   top: 0;
-  background: #ccc;
-  z-index: -1; }
+  background: #ccc; }
 
 .dropdown {
   text-align: center;
@@ -928,6 +927,39 @@ button:hover {
   width: 1200px;
   margin: 0 auto; }
 
+.slider {
+  width: auto;
+  height: 100%;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap; }
+  .slider img {
+    display: inline-block;
+    width: auto; }
+
+.slider-full {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 10000px;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  z-index: 20000; }
+
+#image-gallery {
+  height: 100%;
+  margin: 0 auto; }
+
+.cancel-full-slider {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 56px;
+  height: 56px;
+  z-index: 20000;
+  cursor: pointer; }
+
 /*--------------------- REPONSIVE --------------------------*/
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
@@ -1023,8 +1055,9 @@ button:hover {
   .listings_map_column {
     left: 360px;
     right: 0;
-    top: 180px;
-    bottom: 0; }
+    top: 100px;
+    bottom: 0;
+    z-index: 100; }
 
   .block-agent-single {
     width: 95%; }
@@ -1052,8 +1085,9 @@ button:hover {
     position: fixed;
     left: 670px;
     right: 0;
-    top: 180px;
-    bottom: 0; }
+    top: 100px;
+    bottom: 0;
+    z-index: 100; }
 
   #header-nav, #page-header-nav, #page-header-nav {
     display: none; }
@@ -1074,8 +1108,8 @@ button:hover {
     position: fixed;
     left: 360px;
     right: 0;
-    top: 180px;
-    bottom: 0; } }
+    top: 100px;
+    bottom: 100; } }
 /* iPads (portrait and landscape) ----------- */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
   /* Styles */ }
@@ -1137,7 +1171,7 @@ iPad 3
 
   .block-image {
     height: 380px;
-    width: 569px; }
+    width: 575px; }
 
   .exclusive-text {
     max-width: 50%;
@@ -1152,8 +1186,9 @@ iPad 3
     position: fixed;
     left: 970px;
     right: 0;
-    top: 180px;
-    bottom: 0; }
+    top: 100px;
+    bottom: 0;
+    z-index: 100; }
 
   .block-agent-single {
     width: 1200px; }
