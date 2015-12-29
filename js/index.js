@@ -1,5 +1,7 @@
-$(document).ready(function() {
-
+$(document).ready(function(){
+	
+	property_query_data();
+	
     $("#bed-search-filter").click(function() {
         if ($(".bed-checklist").css("display") === "none") {
             hide_popup_all();
@@ -24,49 +26,54 @@ $(document).ready(function() {
         $(".features-filters").toggle();
     });
 
-    var curleftmap = $(".listings_map_column").css("left");
+  var curleftmap = $(".listings_map_column").css("left");
+  
+  $("#map-toggle").click(function(){
+    $(".map-multi-search").css("top","0");
+    $(".map-multi-search").css("left","0");
+    $(".listings_map_column").css("left","0");
+    disable_scroll();
+	//property_query ();
+	property_query_data ();
+  });
 
-    $("#map-toggle").click(function() {
-        $(".map-multi-search").css("top", "0");
-        $(".map-multi-search").css("left", "0");
-        $(".listings_map_column").css("left", "0");
-        disable_scroll();
-    });
+  $("#list-toggle").click(function(){
+    $(".map-multi-search").css("top","0");
+    //$(".map-multi-search").css("left",curleftmap);
+    $(".listings_map_column").css("left",curleftmap);
+    enable_scroll();
+	//property_query ();
+	property_query_data ();
+  });
 
-    $("#list-toggle").click(function() {
-        $(".map-multi-search").css("top", "0");
-        $(".map-multi-search").css("left", curleftmap);
-        $(".listings_map_column").css("left", curleftmap);
-        enable_scroll();
-    });
+  $(window).scroll(function() {
+    if ( window.pageYOffset > 81) {
+      $(".multi-search-block").css("position","fixed");
+      $(".multi-search-block").css("top","0");
+    } else {
+      $(".multi-search-block").css("position","relative");
+    }
+  });
 
-    $(window).scroll(function() {
-        if (window.pageYOffset > 81) {
-            $(".multi-search-block").css("position", "fixed");
-            $(".multi-search-block").css("top", "0");
-        } else {
-            $(".multi-search-block").css("position", "relative");
-        }
-    });
+  $("#mobile-header-nav-icon").click(function(){
+    //console.log("test");
+    var width = $( window ).width(),
+        left = width - 280 + 20;
+    $("#mobile-header-nav").css("display","block");
 
-    $("#mobile-header-nav-icon").click(function() {
-        var width = $(window).width(),
-            left = width - 300 + 20;
-        $("#mobile-header-nav").css("display", "block");
+    $("#mobile-header-nav > ul").animate({
+        left: left +"px", 
+      }, 100,'linear', function() {
+        // Animation complete.
+      });
+      disable_scroll();
+  });
 
-        $("#mobile-header-nav > ul").animate({
-            left: left + "px",
-        }, 100, 'linear', function() {
-            // Animation complete.
-        });
-        disable_scroll();
-    });
-
-    $("#left-bg").click(function() {
-        $("#mobile-header-nav > ul").animate({
-            left: "100%",
-        }, 300, 'linear', function() {
-            $("#mobile-header-nav").css("display", "none");
+    $("#left-bg").click(function(){
+      $("#mobile-header-nav > ul").animate({
+          left: "100%",
+        }, 300,'linear', function() {
+          $("#mobile-header-nav").css("display","none");
         });
         enable_scroll();
     });
@@ -109,10 +116,10 @@ $(document).ready(function() {
 });
 
 
-function show_full() {
-    $(".slider-full").css("left", "0");
-    $(".cancel-full-slider").click(function() {
-        $(".slider-full").css("left", "999999px");
+function show_full () {
+    $(".slider-full").css("left","0");
+    $(".cancel-full-slider").click(function(){
+      $(".slider-full").css("left","999999px");
     });
 }
 
@@ -123,19 +130,82 @@ function disable_scroll() {
     });
 }
 
-function enable_scroll() {
-    $('html, body').css({
-        'overflow': 'auto',
-        'height': 'auto'
-    });
+function enable_scroll () {
+  $('html, body').css({
+      'overflow': 'auto',
+      'height': 'auto'
+  });
 }
 
-function hide_popup_all() {
-    $(".popup").each(function() {
+function hide_popup_all () {
+  $(".popup").each(function() {
         $(this).hide();
-    });
+  });
 }
 
+function initialize() {
+  property_query_data();
+}
+
+function property_query (number_post) {
+
+	$.ajax({
+		url : ajaxurl,
+		type : 'post',
+		data : {
+			'action' : 'ajax_property_query',
+			'number_post' : number_post,
+			
+		},
+		success : function( data ) {
+			//console.log(data);
+			$('.listing-results').html(data);
+		},
+        error: function(errorThrown){
+            console.log(errorThrown);
+        }
+		});
+	
+}
+
+function property_query_data (number_post) {
+
+	$.ajax({
+		url : ajaxurl,
+		type : 'post',
+		data : {
+			'action' : 'ajax_property_query_data',
+			'number_post' : number_post,
+			
+		},
+		success : function( data ) {
+			data = JSON.parse(data);
+			console.log(data);
+			
+			$('.listing-results').html(data[0]);
+			
+			var mapProp = {
+				center:new google.maps.LatLng(40.7748,-73.9617),
+				zoom:10,
+				mapTypeId:google.maps.MapTypeId.ROADMAP
+			};
+			var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+			for (var x = 1; x<data.length; x++) {
+					
+				var myCenter= new google.maps.LatLng(data[x][7],data[x][8]);
+				var marker=new google.maps.Marker({
+					position:myCenter,
+					icon: templateDir+'/images/marker1.png'
+				});		
+				marker.setMap(map);
+			}
+		},
+        error: function(errorThrown){
+            console.log(errorThrown);
+        }
+		});
+	
+}
 
 function sell_contact () {
     $('.first-home-info').hide();
