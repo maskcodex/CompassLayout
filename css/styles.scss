@@ -210,6 +210,7 @@ button:hover {
     background: #fff;
     color: #000;
     display: none;
+    text-align: center;
 }
 
 .border-bottom {
@@ -992,6 +993,13 @@ button:hover {
     min-width: 15%;
     margin: 1%;
     padding: 0;
+    position: relative;
+}
+
+.neighborh-search {
+    input {
+        cursor: auto;
+    }
 }
 
 .view-toggle {
@@ -1050,18 +1058,17 @@ button:hover {
     font-size: 14px;
 }
 
-.dropdown .checklist {
+.bed-checklist {
     text-align: left;
     padding: 10px;
     margin-top: 10px;
 
     input {
         margin-right: 10px;
-
     }
 }
 
-.dropdown .price_selection {
+.price_selection {
     width: 300px;
 
     input {
@@ -1077,7 +1084,7 @@ button:hover {
     }
 }
 
-.dropdown .features-filters {
+.features-filters {
     width: 600px;
     max-height: 358px;
     right: 0;
@@ -1088,6 +1095,12 @@ button:hover {
         border-collapse: collapse;
         border-spacing: 0;
         width: 100%;
+    }
+
+    img {
+        width: 25px;
+        height: 25px;
+        display: none;
     }
 }
 
@@ -1610,6 +1623,11 @@ button:hover {
         position: none;
     }
 
+    .dropdown {
+        text-align: left;
+        padding-left: 15px;
+    }
+
     .more-search .popup {
         position: absolute;
         top: 0;
@@ -1619,9 +1637,12 @@ button:hover {
         z-index: 3000;
     }
 
-    .dropdown .features-filters {
+    .features-filters {
         max-height: 100%;
         width: 100%;
+        img {
+            display: block;
+        }
     }
 }
 
@@ -1777,6 +1798,11 @@ button:hover {
         text-align: left;
     }
 
+    .dropdown {
+        text-align: left;
+        padding-left: 15px;
+    }
+
     .more-search .dropdown {
         position: none;
     }
@@ -1790,9 +1816,12 @@ button:hover {
         z-index: 3000;
     }
 
-    .dropdown .features-filters {
+    .features-filters {
         max-height: 100%;
         width: 100%;
+        img {
+            display: block;
+        }
     }
 
 }
@@ -1910,9 +1939,18 @@ button:hover {
         z-index: 3000;
     }
 
-    .dropdown .features-filters {
+    .dropdown {
+        text-align: left;
+        padding-left: 15px;
+    }
+
+    .features-filters {
         max-height: 100%;
         width: 100%;
+
+        img {
+            display: block;
+        }
     }
 
 }

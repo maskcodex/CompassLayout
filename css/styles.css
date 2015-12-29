@@ -190,7 +190,8 @@ button:hover, .blue-button:hover {
   margin-top: 10px !important;
   background: #fff;
   color: #000;
-  display: none; }
+  display: none;
+  text-align: center; }
 
 .border-bottom {
   border-bottom: solid 1px #e7e8e7; }
@@ -838,7 +839,11 @@ button:hover, .blue-button:hover {
   display: inline-block;
   min-width: 15%;
   margin: 1%;
-  padding: 0; }
+  padding: 0;
+  position: relative; }
+
+.neighborh-search input {
+  cursor: auto; }
 
 .view-toggle {
   float: right; }
@@ -884,34 +889,38 @@ button:hover, .blue-button:hover {
   font-family: 'Roboto', Helvetica, Arial, sans-serif;
   font-size: 14px; }
 
-.dropdown .checklist {
+.bed-checklist {
   text-align: left;
   padding: 10px;
   margin-top: 10px; }
-  .dropdown .checklist input {
+  .bed-checklist input {
     margin-right: 10px; }
 
-.dropdown .price_selection {
+.price_selection {
   width: 300px; }
-  .dropdown .price_selection input {
+  .price_selection input {
     display: inline-block;
     width: 100px;
     text-align: center;
     border: 1px solid #e8e8e8; }
-  .dropdown .price_selection span {
+  .price_selection span {
     margin: 0 10px;
     line-height: 31px; }
 
-.dropdown .features-filters {
+.features-filters {
   width: 600px;
   max-height: 358px;
   right: 0;
   overflow-x: hidden;
   overflow-y: auto; }
-  .dropdown .features-filters table {
+  .features-filters table {
     border-collapse: collapse;
     border-spacing: 0;
     width: 100%; }
+  .features-filters img {
+    width: 25px;
+    height: 25px;
+    display: none; }
 
 .features-filters #filter_baths li {
   float: left;
@@ -1331,6 +1340,10 @@ button:hover, .blue-button:hover {
   .more-search .dropdown {
     position: none; }
 
+  .dropdown {
+    text-align: left;
+    padding-left: 15px; }
+
   .more-search .popup {
     position: absolute;
     top: 0;
@@ -1339,9 +1352,11 @@ button:hover, .blue-button:hover {
     right: 0;
     z-index: 3000; }
 
-  .dropdown .features-filters {
+  .features-filters {
     max-height: 100%;
-    width: 100%; } }
+    width: 100%; }
+    .features-filters img {
+      display: block; } }
 /* Smartphones (portrait) ----------- */
 @media only screen and (max-width: 768px) and (min-width: 480px) {
   /* Styles */
@@ -1455,6 +1470,10 @@ button:hover, .blue-button:hover {
     width: 100%;
     text-align: left; }
 
+  .dropdown {
+    text-align: left;
+    padding-left: 15px; }
+
   .more-search .dropdown {
     position: none; }
 
@@ -1466,9 +1485,11 @@ button:hover, .blue-button:hover {
     right: 0;
     z-index: 3000; }
 
-  .dropdown .features-filters {
+  .features-filters {
     max-height: 100%;
-    width: 100%; } }
+    width: 100%; }
+    .features-filters img {
+      display: block; } }
 @media only screen and (max-width: 1024px) and (min-width: 768px) {
   .listings_results_column {
     padding: 10px 35px 20px 35px !important;
@@ -1556,9 +1577,15 @@ button:hover, .blue-button:hover {
     right: 0;
     z-index: 3000; }
 
-  .dropdown .features-filters {
+  .dropdown {
+    text-align: left;
+    padding-left: 15px; }
+
+  .features-filters {
     max-height: 100%;
-    width: 100%; } }
+    width: 100%; }
+    .features-filters img {
+      display: block; } }
 @media only screen and (min-width: 1023px) and (max-width: 1224px) {
   #home-content {
     width: 680px; }

@@ -1,26 +1,27 @@
 $(document).ready(function() {
 
     $("#bed-search-filter").click(function() {
-        if ($(this).find(".popup").css("display") === "none") {
+        if ($(".bed-checklist").css("display") === "none") {
             hide_popup_all();
         }
-        $(this).find(".popup").toggle();
+        $(".bed-checklist").toggle();
     });
 
     $("#price-search-filter").click(function() {
-        if ($(this).find(".popup").css("display") === "none") {
+        if ($('.price_selection').css("display") === "none") {
             hide_popup_all();
         }
-        $(this).find(".popup").toggle();
+        $('.price_selection').toggle();
     });
 
     $("#more-search-filter").click(function() {
-
-        if ($(this).find(".popup").css("display") === "none") {
+        if ($(".features-filters").css("display") === "none") {
             hide_popup_all();
+            $(".features-filters img").click(function(){
+                $(".features-filters").hide();
+            });
         }
-        $(this).find(".popup").toggle();
-
+        $(".features-filters").toggle();
     });
 
     var curleftmap = $(".listings_map_column").css("left");
