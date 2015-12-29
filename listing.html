@@ -12,10 +12,9 @@
     <!--[if lt IE 9]>
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
-    <link rel="stylesheet"  href="plugin/lightslider.css"/>
+    <link rel="stylesheet" href="plugin/lightslider.css" />
     <link rel="Stylesheet" type="text/css" href="plugin/css/smoothDivScroll.css" />
     <style type="text/css">
-
     #makeMeScrollable {
         width: 100%;
         height: 100%;
@@ -180,7 +179,6 @@
                         Agent representing this listing
                     </div>
                     <div class="listing-agent-text">Compass Agents partner with you throughout your home search, providing their expertise and deep knowledge of NYC's real estate market to help you find a home you love.</div>
-
                     <div class="row listing-agent-info">
                         <div class="col-sm-4 agent-image">
                             <img src="images/2015/06/225x2252.jpg">
@@ -306,59 +304,656 @@
     });
     </script>
     <div class="slider-full">
-        <div class="item" style="max-width:100%; height:100%">            
-            <div class="clearfix" style="max-width:100%;height:100%">
-                <ul id="image-gallery" class="gallery list-unstyled cS-hidden">
-                    <li data-thumb="images/2015/09/640x48022.jpg"> 
-                        <img style="margin:0 auto" src="images/2015/09/640x48022.jpg" />
-                         </li><li data-thumb="images/2015/09/640x48022.jpg"> 
-                        <img src="images/2015/09/640x48022.jpg" />
-                         </li><li data-thumb="images/2015/09/640x48022.jpg"> 
-                        <img src="images/2015/09/640x48022.jpg" />
-                         </li><li data-thumb="images/2015/09/640x48022.jpg"> 
-                        <img src="images/2015/09/640x48022.jpg" />
-                         </li><li data-thumb="images/2015/09/640x48022.jpg"> 
-                        <img src="images/2015/09/640x48022.jpg" />
-                         </li><li data-thumb="images/2015/09/640x48022.jpg"> 
-                        <img src="images/2015/09/640x48022.jpg" />
-                         </li><li data-thumb="images/2015/09/640x48022.jpg"> 
-                        <img src="images/2015/09/640x48022.jpg" />
-                         </li><li data-thumb="images/2015/09/640x48022.jpg"> 
-                        <img src="images/2015/09/640x48022.jpg" />
-                         </li><li data-thumb="images/2015/09/640x48022.jpg"> 
-                        <img src="images/2015/09/640x48022.jpg" />
-                         </li>
-                        <li data-thumb="images/2015/09/640x48022.jpg"> 
-                        <img src="images/2015/09/640x48022.jpg" />
-                         </li>
-                    
-                </ul>
+        <div class="cancel-full-slider"><img src="images/cancel-icon.png"></div>
+        <script type="text/javascript" src="js/jssor.slider.mini.js"></script>
+        <!-- use jssor.slider.debug.js instead for debug -->
+        <script>
+        jQuery(document).ready(function($) {
+
+            var jssor_1_SlideshowTransitions = [{
+                $Duration: 1200,
+                $Zoom: 11,
+                $Rotate: -1,
+                $Easing: {
+                    $Zoom: $Jease$.$InQuad,
+                    $Opacity: $Jease$.$Linear,
+                    $Rotate: $Jease$.$InQuad
+                },
+                $Opacity: 2,
+                $Round: {
+                    $Rotate: 0.5
+                },
+                $Brother: {
+                    $Duration: 1200,
+                    $Zoom: 1,
+                    $Rotate: 1,
+                    $Easing: $Jease$.$Swing,
+                    $Opacity: 2,
+                    $Round: {
+                        $Rotate: 0.5
+                    },
+                    $Shift: 90
+                }
+            }, {
+                $Duration: 1400,
+                x: 0.25,
+                $Zoom: 1.5,
+                $Easing: {
+                    $Left: $Jease$.$InWave,
+                    $Zoom: $Jease$.$InSine
+                },
+                $Opacity: 2,
+                $ZIndex: -10,
+                $Brother: {
+                    $Duration: 1400,
+                    x: -0.25,
+                    $Zoom: 1.5,
+                    $Easing: {
+                        $Left: $Jease$.$InWave,
+                        $Zoom: $Jease$.$InSine
+                    },
+                    $Opacity: 2,
+                    $ZIndex: -10
+                }
+            }, {
+                $Duration: 1200,
+                $Zoom: 11,
+                $Rotate: 1,
+                $Easing: {
+                    $Opacity: $Jease$.$Linear,
+                    $Rotate: $Jease$.$InQuad
+                },
+                $Opacity: 2,
+                $Round: {
+                    $Rotate: 1
+                },
+                $ZIndex: -10,
+                $Brother: {
+                    $Duration: 1200,
+                    $Zoom: 11,
+                    $Rotate: -1,
+                    $Easing: {
+                        $Opacity: $Jease$.$Linear,
+                        $Rotate: $Jease$.$InQuad
+                    },
+                    $Opacity: 2,
+                    $Round: {
+                        $Rotate: 1
+                    },
+                    $ZIndex: -10,
+                    $Shift: 600
+                }
+            }, {
+                $Duration: 1500,
+                x: 0.5,
+                $Cols: 2,
+                $ChessMode: {
+                    $Column: 3
+                },
+                $Easing: {
+                    $Left: $Jease$.$InOutCubic
+                },
+                $Opacity: 2,
+                $Brother: {
+                    $Duration: 1500,
+                    $Opacity: 2
+                }
+            }, {
+                $Duration: 1500,
+                x: -0.3,
+                y: 0.5,
+                $Zoom: 1,
+                $Rotate: 0.1,
+                $During: {
+                    $Left: [0.6, 0.4],
+                    $Top: [0.6, 0.4],
+                    $Rotate: [0.6, 0.4],
+                    $Zoom: [0.6, 0.4]
+                },
+                $Easing: {
+                    $Left: $Jease$.$InQuad,
+                    $Top: $Jease$.$InQuad,
+                    $Opacity: $Jease$.$Linear,
+                    $Rotate: $Jease$.$InQuad
+                },
+                $Opacity: 2,
+                $Brother: {
+                    $Duration: 1000,
+                    $Zoom: 11,
+                    $Rotate: -0.5,
+                    $Easing: {
+                        $Opacity: $Jease$.$Linear,
+                        $Rotate: $Jease$.$InQuad
+                    },
+                    $Opacity: 2,
+                    $Shift: 200
+                }
+            }, {
+                $Duration: 1500,
+                $Zoom: 11,
+                $Rotate: 0.5,
+                $During: {
+                    $Left: [0.4, 0.6],
+                    $Top: [0.4, 0.6],
+                    $Rotate: [0.4, 0.6],
+                    $Zoom: [0.4, 0.6]
+                },
+                $Easing: {
+                    $Opacity: $Jease$.$Linear,
+                    $Rotate: $Jease$.$InQuad
+                },
+                $Opacity: 2,
+                $Brother: {
+                    $Duration: 1000,
+                    $Zoom: 1,
+                    $Rotate: -0.5,
+                    $Easing: {
+                        $Opacity: $Jease$.$Linear,
+                        $Rotate: $Jease$.$InQuad
+                    },
+                    $Opacity: 2,
+                    $Shift: 200
+                }
+            }, {
+                $Duration: 1500,
+                x: 0.3,
+                $During: {
+                    $Left: [0.6, 0.4]
+                },
+                $Easing: {
+                    $Left: $Jease$.$InQuad,
+                    $Opacity: $Jease$.$Linear
+                },
+                $Opacity: 2,
+                $Outside: true,
+                $Brother: {
+                    $Duration: 1000,
+                    x: -0.3,
+                    $Easing: {
+                        $Left: $Jease$.$InQuad,
+                        $Opacity: $Jease$.$Linear
+                    },
+                    $Opacity: 2
+                }
+            }, {
+                $Duration: 1200,
+                x: 0.25,
+                y: 0.5,
+                $Rotate: -0.1,
+                $Easing: {
+                    $Left: $Jease$.$InQuad,
+                    $Top: $Jease$.$InQuad,
+                    $Opacity: $Jease$.$Linear,
+                    $Rotate: $Jease$.$InQuad
+                },
+                $Opacity: 2,
+                $Brother: {
+                    $Duration: 1200,
+                    x: -0.1,
+                    y: -0.7,
+                    $Rotate: 0.1,
+                    $Easing: {
+                        $Left: $Jease$.$InQuad,
+                        $Top: $Jease$.$InQuad,
+                        $Opacity: $Jease$.$Linear,
+                        $Rotate: $Jease$.$InQuad
+                    },
+                    $Opacity: 2
+                }
+            }, {
+                $Duration: 1600,
+                x: 1,
+                $Rows: 2,
+                $ChessMode: {
+                    $Row: 3
+                },
+                $Easing: {
+                    $Left: $Jease$.$InOutQuart,
+                    $Opacity: $Jease$.$Linear
+                },
+                $Opacity: 2,
+                $Brother: {
+                    $Duration: 1600,
+                    x: -1,
+                    $Rows: 2,
+                    $ChessMode: {
+                        $Row: 3
+                    },
+                    $Easing: {
+                        $Left: $Jease$.$InOutQuart,
+                        $Opacity: $Jease$.$Linear
+                    },
+                    $Opacity: 2
+                }
+            }, {
+                $Duration: 1600,
+                x: 1,
+                $Rows: 2,
+                $ChessMode: {
+                    $Row: 3
+                },
+                $Easing: {
+                    $Left: $Jease$.$InOutQuart,
+                    $Opacity: $Jease$.$Linear
+                },
+                $Opacity: 2,
+                $Brother: {
+                    $Duration: 1600,
+                    x: -1,
+                    $Rows: 2,
+                    $ChessMode: {
+                        $Row: 3
+                    },
+                    $Easing: {
+                        $Left: $Jease$.$InOutQuart,
+                        $Opacity: $Jease$.$Linear
+                    },
+                    $Opacity: 2
+                }
+            }, {
+                $Duration: 1600,
+                y: -1,
+                $Cols: 2,
+                $ChessMode: {
+                    $Column: 12
+                },
+                $Easing: {
+                    $Top: $Jease$.$InOutQuart,
+                    $Opacity: $Jease$.$Linear
+                },
+                $Opacity: 2,
+                $Brother: {
+                    $Duration: 1600,
+                    y: 1,
+                    $Cols: 2,
+                    $ChessMode: {
+                        $Column: 12
+                    },
+                    $Easing: {
+                        $Top: $Jease$.$InOutQuart,
+                        $Opacity: $Jease$.$Linear
+                    },
+                    $Opacity: 2
+                }
+            }, {
+                $Duration: 1200,
+                y: 1,
+                $Easing: {
+                    $Top: $Jease$.$InOutQuart,
+                    $Opacity: $Jease$.$Linear
+                },
+                $Opacity: 2,
+                $Brother: {
+                    $Duration: 1200,
+                    y: -1,
+                    $Easing: {
+                        $Top: $Jease$.$InOutQuart,
+                        $Opacity: $Jease$.$Linear
+                    },
+                    $Opacity: 2
+                }
+            }, {
+                $Duration: 1200,
+                x: 1,
+                $Easing: {
+                    $Left: $Jease$.$InOutQuart,
+                    $Opacity: $Jease$.$Linear
+                },
+                $Opacity: 2,
+                $Brother: {
+                    $Duration: 1200,
+                    x: -1,
+                    $Easing: {
+                        $Left: $Jease$.$InOutQuart,
+                        $Opacity: $Jease$.$Linear
+                    },
+                    $Opacity: 2
+                }
+            }, {
+                $Duration: 1200,
+                y: -1,
+                $Easing: {
+                    $Top: $Jease$.$InOutQuart,
+                    $Opacity: $Jease$.$Linear
+                },
+                $Opacity: 2,
+                $ZIndex: -10,
+                $Brother: {
+                    $Duration: 1200,
+                    y: -1,
+                    $Easing: {
+                        $Top: $Jease$.$InOutQuart,
+                        $Opacity: $Jease$.$Linear
+                    },
+                    $Opacity: 2,
+                    $ZIndex: -10,
+                    $Shift: -100
+                }
+            }, {
+                $Duration: 1200,
+                x: 1,
+                $Delay: 40,
+                $Cols: 6,
+                $Formation: $JssorSlideshowFormations$.$FormationStraight,
+                $Easing: {
+                    $Left: $Jease$.$InOutQuart,
+                    $Opacity: $Jease$.$Linear
+                },
+                $Opacity: 2,
+                $ZIndex: -10,
+                $Brother: {
+                    $Duration: 1200,
+                    x: 1,
+                    $Delay: 40,
+                    $Cols: 6,
+                    $Formation: $JssorSlideshowFormations$.$FormationStraight,
+                    $Easing: {
+                        $Top: $Jease$.$InOutQuart,
+                        $Opacity: $Jease$.$Linear
+                    },
+                    $Opacity: 2,
+                    $ZIndex: -10,
+                    $Shift: -100
+                }
+            }, {
+                $Duration: 1500,
+                x: -0.1,
+                y: -0.7,
+                $Rotate: 0.1,
+                $During: {
+                    $Left: [0.6, 0.4],
+                    $Top: [0.6, 0.4],
+                    $Rotate: [0.6, 0.4]
+                },
+                $Easing: {
+                    $Left: $Jease$.$InQuad,
+                    $Top: $Jease$.$InQuad,
+                    $Opacity: $Jease$.$Linear,
+                    $Rotate: $Jease$.$InQuad
+                },
+                $Opacity: 2,
+                $Brother: {
+                    $Duration: 1000,
+                    x: 0.2,
+                    y: 0.5,
+                    $Rotate: -0.1,
+                    $Easing: {
+                        $Left: $Jease$.$InQuad,
+                        $Top: $Jease$.$InQuad,
+                        $Opacity: $Jease$.$Linear,
+                        $Rotate: $Jease$.$InQuad
+                    },
+                    $Opacity: 2
+                }
+            }, {
+                $Duration: 1600,
+                x: -0.2,
+                $Delay: 40,
+                $Cols: 12,
+                $During: {
+                    $Left: [0.4, 0.6]
+                },
+                $SlideOut: true,
+                $Formation: $JssorSlideshowFormations$.$FormationStraight,
+                $Assembly: 260,
+                $Easing: {
+                    $Left: $Jease$.$InOutExpo,
+                    $Opacity: $Jease$.$InOutQuad
+                },
+                $Opacity: 2,
+                $Outside: true,
+                $Round: {
+                    $Top: 0.5
+                },
+                $Brother: {
+                    $Duration: 1000,
+                    x: 0.2,
+                    $Delay: 40,
+                    $Cols: 12,
+                    $Formation: $JssorSlideshowFormations$.$FormationStraight,
+                    $Assembly: 1028,
+                    $Easing: {
+                        $Left: $Jease$.$InOutExpo,
+                        $Opacity: $Jease$.$InOutQuad
+                    },
+                    $Opacity: 2,
+                    $Round: {
+                        $Top: 0.5
+                    }
+                }
+            }];
+
+            var jssor_1_options = {
+                $AutoPlay: false,
+                $FillMode: 5,
+                $SlideshowOptions: {
+                    $Class: $JssorSlideshowRunner$,
+                    $Transitions: jssor_1_SlideshowTransitions,
+                    $TransitionsOrder: 1
+                },
+                $ThumbnailNavigatorOptions: { //[Optional] Options to specify and enable thumbnail navigator or not
+                    $Class: $JssorThumbnailNavigator$, //[Required] Class to create thumbnail navigator instance
+                    $ChanceToShow: 2, //[Required] 0 Never, 1 Mouse Over, 2 Always
+
+                    $SpacingX: 8, //[Optional] Horizontal space between each thumbnail in pixel, default value is 0
+                    $DisplayPieces: 10, //[Optional] Number of pieces to display, default value is 1
+                    $ParkingPosition: 360 //[Optional] The offset position to park thumbnail
+                },
+                $ArrowNavigatorOptions: { //[Optional] Options to specify and enable arrow navigator or not
+                    $Class: $JssorArrowNavigator$, //[Requried] Class to create arrow navigator instance
+                    $ChanceToShow: 2, //[Required] 0 Never, 1 Mouse Over, 2 Always
+                    $AutoCenter: 0, //[Optional] Auto center arrows in parent container, 0 No, 1 Horizontal, 2 Vertical, 3 Both, default value is 0
+                    $Steps: 1 //[Optional] Steps to go for each navigation request, default value is 1
+                }
+            };
+
+            var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+
+            //responsive code begin
+            //you can remove responsive code if you don't want the slider scales while window resizing
+            function ScaleSlider() {
+                var refSize = jssor_1_slider.$Elmt.parentNode.clientWidth;
+                if (refSize) {
+                    refSize = Math.min(refSize, 600);
+                    jssor_1_slider.$ScaleWidth(refSize);
+                } else {
+                    window.setTimeout(ScaleSlider, 30);
+                }
+            }
+            ScaleSlider();
+            $(window).bind("load", ScaleSlider);
+            $(window).bind("resize", ScaleSlider);
+            $(window).bind("orientationcange", ScaleSlider);
+            //responsive code end
+        });
+        </script>
+        <style>
+        .jssort07 {
+            position: absolute;
+            /* size of thumbnail navigator container */
+            width: 800px;
+            height: 100px;
+        }
+        
+        .jssort07 .p {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 72px;
+            height: 72px;
+        }
+        
+        .jssort07 .i {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 72px;
+            height: 72px;
+            filter: alpha(opacity=80);
+            opacity: .8;
+        }
+        
+        .jssort07 .p:hover .i,
+        .jssort07 .pav .i {
+            filter: alpha(opacity=100);
+            opacity: 1;
+        }
+        
+        .jssort07 .o {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 70px;
+            height: 70px;
+            border: 1px solid #000;
+            box-sizing: content-box;
+            transition: border-color .6s;
+            -moz-transition: border-color .6s;
+            -webkit-transition: border-color .6s;
+            -o-transition: border-color .6s;
+        }
+        
+        .jssort07 .pav .o {
+            border-color: #0099ff;
+        }
+        
+        .jssort07 .p:hover .o {
+            border-color: #fff;
+            transition: none;
+            -moz-transition: none;
+            -webkit-transition: none;
+            -o-transition: none;
+        }
+        
+        .jssort07 .p.pdn .o {
+            border-color: #0099ff;
+        }
+        
+        * html .jssort07 .o {
+            /* ie quirks mode adjust */
+            width/**/
+            : 72px;
+            height/**/
+            : 72px;
+        }
+        
+        .jssorb13 {
+            position: absolute;
+        }
+        
+        .jssorb13 div,
+        .jssorb13 div:hover,
+        .jssorb13 .av {
+            position: absolute;
+            /* size of bullet elment */
+            width: 21px;
+            height: 21px;
+            background: url('img/b13.png') no-repeat;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        
+        .jssorb13 div {
+            background-position: -5px -5px;
+        }
+        
+        .jssorb13 div:hover,
+        .jssorb13 .av:hover {
+            background-position: -35px -5px;
+        }
+        
+        .jssorb13 .av {
+            background-position: -65px -5px;
+        }
+        
+        .jssorb13 .dn,
+        .jssorb13 .dn:hover {
+            background-position: -95px -5px;
+        }
+        
+        .jssora03l {
+            display: block;
+            position: absolute;
+            /* size of arrow element */
+            width: 55px;
+            height: 55px;
+            cursor: pointer;
+            background: url(images/arrow-left.png) no-repeat;
+            overflow: hidden;
+        }
+        
+        .jssora03r {
+            display: block;
+            position: absolute;
+            /* size of arrow element */
+            width: 55px;
+            height: 55px;
+            cursor: pointer;
+            background: url(images/arrow-right.png) no-repeat;
+            overflow: hidden;
+        }
+        </style>
+        <div style="margin-top: 30px;">
+            <div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 600px; height: 600px; overflow: hidden; visibility: hidden;">
+                <!-- Loading Screen -->
+                <div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
+                    <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
+                    <div style="position:absolute;display:block;background:url('img/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
+                </div>
+                <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 600px; height: 400px; overflow: hidden;">
+                    <div style="display: none;">
+                        <img data-u="image" src="images/2015/09/640x48022.jpg" />
+                        <img u="thumb" src="images/2015/09/640x48022.jpg" />
+                    </div>
+                    <div style="display: none;">
+                        <img data-u="image" src="images/2015/09/640x48022.jpg" />
+                    </div>
+                    <div style="display: none;">
+                        <img data-u="image" src="images/2015/09/640x48022.jpg" />
+                    </div>
+                    <div style="display: none;">
+                        <img data-u="image" src="images/2015/09/640x48022.jpg" />
+                    </div>
+                    <div style="display: none;">
+                        <img data-u="image" src="images/2015/09/640x48022.jpg" />
+                    </div>
+                    <div style="display: none;">
+                        <img data-u="image" src="images/2015/09/640x48022.jpg" />
+                    </div>
+                    <div style="display: none;">
+                        <img data-u="image" src="images/2015/09/640x48022.jpg" />
+                    </div>
+                    <div style="display: none;">
+                        <img data-u="image" src="images/2015/09/640x48022.jpg" />
+                    </div>
+                    <div style="display: none;">
+                        <img data-u="image" src="images/2015/09/640x48022.jpg" />
+                    </div>
+                    <div style="display: none;">
+                        <img data-u="image" src="images/2015/09/640x48022.jpg" />
+                    </div>
+                    <div style="display: none;">
+                        <img data-u="image" src="images/2015/09/640x48022.jpg" />
+                    </div>
+                </div>
+                <span u="arrowleft" class="jssora03l" style="top: 123px; left: 8px;">
+        </span>
+                <!-- Arrow Right -->
+                <span u="arrowright" class="jssora03r" style="top: 123px; right: 8px;">
+        </span>
+                <div u="thumbnavigator" class="jssort07" style="left: 0px; bottom: 0px;">
+                    <!-- Thumbnail Item Skin Begin -->
+                    <div u="slides" style="cursor: default;">
+                        <div u="prototype" class="p">
+                            <div u="thumbnailtemplate" class="i"></div>
+                            <div class="o"></div>
+                        </div>
+                    </div>
+                    <!-- Thumbnail Item Skin End -->
+                </div>
             </div>
         </div>
-        <div class="cancel-full-slider"><img src="images/cancel-icon.png"></div>
     </div>
-         <script src="plugin/lightslider.js"></script> 
-        <script>
-         $(document).ready(function() {
-            $("#content-slider").lightSlider({
-                loop:true,
-                keyPress:true
-            });
-            $('#image-gallery').lightSlider({
-                gallery:true,
-                item:1,
-                thumbItem:9,
-                slideMargin: 100,
-                speed:500,
-                auto:false,
-                loop:true,
-                onSliderLoad: function() {
-                    $('#image-gallery').removeClass('cS-hidden');
-                }  
-            });
-
-            $('.lSSlideWrapper').css('height',($(window).height() - 120 ) + 'px');
-        });
-    </script>
 </body>
+
 </html>
