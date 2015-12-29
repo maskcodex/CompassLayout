@@ -357,36 +357,46 @@ button:hover {
     background: rgba(0,0,0,.5);
     bottom: 0;
     z-index: 1001;
+    font-family: 'Roboto', Helvetica, Arial, sans-serif;
     
     ul {
-        width: 280px;
+        padding-top: 15px;
+        width: 300px;
         background: white;
         position: fixed;
         top: 0;
         left: 100%;
         bottom: 0;
-        padding: 10px;
+    }
+
+    ul img {
+        position: absolute;
+        top: 25px;
+        right: 25px;
+        width: 25px;
+        height: 25px;
+        z-index: 1200;
     }
 
     ul li {
         height: auto;
-        font-size: 20px;
+        font-size: 17px;
         padding-top: 5px;
         padding-left: 25px;
         cursor: pointer;
         font-weight: 600;
+        line-height: 30px;
         position: relative;
     }
 
     ul.sub-menu {
         position: relative;
-        border-top: solid 1px #ccc;
-        margin-left: -250px;
+        margin-left: -300px;
     }
 
     ul.sub-menu li {
         padding: 5px 25px;
-        font-size: 15px;
+        font-size: 13px;
         font-family: 'Roboto', Helvetica, Arial, sans-serif;
         font-style: normal;
         font-weight: 400;
@@ -415,11 +425,141 @@ button:hover {
     text-align: center;
 }
 
+#home-info {
+    width: 100%;
+    background: white;
+    height: auto;
+    margin-top: 60px;
+}
+
+#home-info-action {
+    padding-top:60px;
+    h1 {
+        font-size: 40px;
+        margin: 0 auto;
+        width: 80%;
+        line-height: 40px;
+        background: white;
+        text-align: center;
+        font-weight: bold;
+        padding-bottom: 60px;
+    }
+}
+
 #home-listing-group {
     max-width: 100%;
     margin: 0 auto;
     padding-top: 40px;
     text-align: center;
+}
+
+#home-info-action .group-button {
+    width: 60%;
+    margin: 0 auto;
+
+    li {
+        width: 50%;
+        display: inline-block;
+        margin-left: -4px;
+        border: solid 1px black;
+        padding: 20px;
+        text-align: center;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    li.activated {
+        background: black;
+        color: white;
+    }
+
+    li.activated:hover {
+        background: #2F2F2F;
+    }
+}
+
+.home-info-frame {
+    width: 80%;
+    margin: 60px auto;
+    display: none;
+
+    h2 {
+        font-size: 30px;
+        font-weight: bold;
+        line-height: 30px;
+        margin-bottom: 25px;
+        margin-top: 25px;
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 28px;
+        margin-bottom: 40px;
+    }
+}
+
+.current {
+    display: block;
+}
+
+.home-info-frame .frame-left {
+    float: left;
+    width: 50%;
+    img {
+        width: 80%;
+        margin-left: 10%;
+    }
+}
+
+.home-info-frame .frame-right {
+    float: left;
+    width: 50%;
+    img {
+        width: 80%;
+        margin-left: 10%;
+    }
+
+    button {
+        float: right;
+    }
+}
+
+#home-info-link {
+    width: 90%;
+    margin: 60px auto;
+}
+
+.group-img-link {
+
+}
+
+.group-img-link .link-block {
+    width: 46%;
+    height: 300px;
+    margin: 1%;
+    float: left;
+    display: table;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-image: url('../images/2015/06/IMG_7507.jpg'); 
+}
+
+.link-block .link-info {
+    width: 80%;
+    height: 150px;
+    margin: 75px auto;
+    background: rgba(0,0,0,0.5);
+    border-top: solid 1px white;
+    color: white;
+    text-align: center;
+
+    h3 {
+        font-size: 30px;
+        font-weight: bold;
+        height: 75px;
+        line-height: 75px;
+    }
 }
 
 .exclusive-heading {
@@ -442,7 +582,7 @@ button:hover {
 
 .home-listing-block {
     background: white;
-    border-bottom: solid 2px black;
+    border-bottom: solid 1px black;
     margin-bottom: 20px;
     cursor: pointer;
     float: left;
@@ -636,7 +776,7 @@ button:hover {
 
 .listing-silder {
     width: 100%;
-    height: 300px;
+    height: 420px;
     background: #eee;
     overflow: hidden;
     img {
@@ -836,6 +976,22 @@ button:hover {
     div.col-sm-3 {
         padding: 5px;
     }
+}
+
+.mobile-search-toggle {
+    display: none;
+}
+
+.search-action-group {
+    float: left;
+    width: 80%;
+}
+
+.neighborh-search, .bed-search, .price-search, .more-search {
+    display: inline-block;
+    min-width: 15%;
+    margin: 1%;
+    padding: 0;
 }
 
 .view-toggle {
@@ -1161,6 +1317,105 @@ button:hover {
     cursor: pointer;
 }
 
+.sell-page-content {
+    background: white;
+    position: absolute;
+    top: 82px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-family: 'Roboto', Helvetica, Arial, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    overflow: auto;
+
+    h1 {
+        text-align: center;
+        font-size: 42px;
+        color: #000;
+        padding: 50px 10px;
+        line-height: 42px;
+    }
+}
+
+.first-home-info {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.first-home-info form {
+    padding: 15px;
+    text-align: center;
+    font-size: 24px;
+    line-height: 24px;
+}
+
+.first-home-info form > div {
+    min-height: 50px;
+}
+
+.special-text-input {
+    border:none;
+    border-bottom: solid 1px blue;
+    text-align: center;
+}
+
+.special-text-input:focus {
+    outline: none;
+}
+
+.special-select-input { 
+    border:none;
+    border-bottom: solid 1px blue;
+    min-width: 55px;
+}
+
+.special-select-input:focus {
+    outline: none;
+}
+
+.blue-button {
+    @extend button;
+    background: #0660cc;
+    margin-top: 20px; 
+}
+
+.sell-home-contact {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.sell-home-contact form {
+    padding: 15px;
+    text-align: center;
+    font-size: 24px;
+    line-height: 24px;
+
+    input[type="text"] {
+        border: none;
+        background: #eee;
+        height: 70px;
+        margin-bottom: 15px;
+        padding-left: 15px;
+        color: #ccc;
+        font-size: 18px;
+        min-width: 300px;
+    }
+
+    input[type="text"]:focus {
+        outline: none;
+    }
+
+    input[type="submit"] {
+        background: #0660cc;
+        border: none;
+        width: 300px;
+        color: white;
+        height: 70px;
+        line-height: 70px;
+        font-size: 18px;
+    }
+}
 
 /*--------------------- REPONSIVE --------------------------*/
 
@@ -1209,6 +1464,33 @@ button:hover {
 
     #home-listing-group {
         max-width: 300px;
+    }
+
+    #home-info-action {
+        display: none;
+    }
+
+    .group-img-link .link-block {
+        width: 100%;
+        height: 460px;
+    }
+
+    .link-block .link-info {
+        height: 230px;
+        width: 80%;
+        margin: 0 auto;
+        padding: 10px;
+        margin-top: 115px;    
+
+        h3 {
+            height: 115px;
+            line-height: 115px;
+        }
+    }
+
+    .block-image {
+        height: 190px;
+        width: 290px;
     }
 
     .block-image {
@@ -1262,6 +1544,53 @@ button:hover {
     .view-toggle {
         display: none;
     }
+
+    .search-action-group {
+        width: 100%;
+    }
+
+    .mobile-search-toggle {
+        display: inline-block;
+        width: 5%;
+        margin: 1%;
+        vertical-align: top;
+        label {
+            border: solid 1px #ccc;
+            height: 49px;
+            text-align: center;
+            width: 100%;
+            line-height: 48px;
+            cursor: pointer;
+        } 
+    }
+
+    .neighborh-search {
+        width: 90%;
+    }
+
+    .bed-search, .price-search, .more-search {
+        display: none;
+        width: 100%;
+        text-align: left;
+    }
+
+    .more-search .dropdown {
+        position: none;
+    }
+
+    .more-search .popup {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 3000;
+    }
+
+    .dropdown .features-filters {
+        max-height: 100%;
+        width: 100%;
+    }
 }
 
 /* Smartphones (portrait) ----------- */
@@ -1275,6 +1604,20 @@ button:hover {
 	#home-listing-group {
 		max-width: 300px;
 	}
+
+    #home-info-action {
+        display: none;
+    }
+
+    .group-img-link .link-block {
+        height: 360px;
+    }
+
+    .link-block .link-info {
+        height: 180px;
+        margin-top: 90px;
+
+    }
 
 	.block-image {
 		height: 190px;
@@ -1368,6 +1711,58 @@ button:hover {
     .view-toggle {
         display: none;
     }
+
+    .multi-search-block {
+
+    }
+
+    .search-action-group {
+        width: 100%;
+    }
+
+    .mobile-search-toggle {
+        display: inline-block;
+        width: 5%;
+        margin: 1%;
+        vertical-align: top;
+        label {
+            border: solid 1px #ccc;
+            height: 49px;
+            text-align: center;
+            width: 100%;
+            line-height: 48px;
+            cursor: pointer;
+        } 
+    }
+
+    .neighborh-search {
+        width: 90%;
+    }
+
+    .bed-search, .price-search, .more-search {
+        display: none;
+        width: 100%;
+        text-align: left;
+    }
+
+    .more-search .dropdown {
+        position: none;
+    }
+
+    .more-search .popup {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 3000;
+    }
+
+    .dropdown .features-filters {
+        max-height: 100%;
+        width: 100%;
+    }
+
 }
 
 
@@ -1396,6 +1791,20 @@ button:hover {
         max-width: 680px;
     }
 
+    #home-info-action {
+        h1 {
+            width: 80%;
+        }
+    }
+
+    #home-info-action .group-button {
+        width: 60%;
+    }
+
+    #home-info-link {
+        width: 90%;
+    }
+
     .home-listing-block {
         margin: 15px;
     }
@@ -1415,6 +1824,7 @@ button:hover {
 
     #mobile-header-nav {
         display: none;
+
     }
 
     .block-agent-info {
@@ -1426,6 +1836,53 @@ button:hover {
         display: none;
     }
 
+    .search-action-group {
+        width: 100%;
+    }
+
+    .mobile-search-toggle {
+        display: inline-block;
+        width: 5%;
+        margin: 1%;
+        vertical-align: top;
+        label {
+            border: solid 1px #ccc;
+            height: 49px;
+            text-align: center;
+            width: 100%;
+            line-height: 48px;
+            cursor: pointer;
+        } 
+    }
+
+    .neighborh-search {
+        width: 90%;
+    }
+
+    .bed-search, .price-search, .more-search {
+        display: none;
+        width: 100%;
+        text-align: left;
+    }
+
+    .more-search .dropdown {
+        position: none;
+    }
+
+    .more-search .popup {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 3000;
+    }
+
+    .dropdown .features-filters {
+        max-height: 100%;
+        width: 100%;
+    }
+
 }
 
 @media only screen  and (min-width : 1023px) and (max-width : 1224px) {
@@ -1435,6 +1892,20 @@ button:hover {
 
     #home-listing-group {
         max-width: 680px;
+    }
+
+    #home-info-action {
+        h1 {
+            width: 60%;
+        }
+    }
+
+    #home-info-action .group-button {
+        width: 40%;
+    }
+
+    #home-info-link {
+        width: 90%;
     }
 
     .home-listing-block {
@@ -1486,6 +1957,20 @@ button:hover {
 		max-width: 1200px;
 	}
 
+    #home-info-action {
+        h1 {
+            width: 60%;
+        }
+    }
+
+    #home-info-action .group-button {
+        width: 40%;
+    }
+
+    #home-info-link {
+        width: 85%;
+    }
+
     .home-listing-block {
         margin: 15px;
     }
@@ -1533,3 +2018,8 @@ button:hover {
     }
 }
 
+@media only screen and (max-height: 710px) { 
+    .listing-silder {
+        height: 300px;
+    }
+}

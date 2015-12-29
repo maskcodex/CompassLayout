@@ -14,6 +14,7 @@
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
 </head>
+
 <body>
     <div id="wrap">
         <header id="page-header" rol="header" class="border-bottom">
@@ -54,12 +55,15 @@
             </nav>
         </header>
         <div class="searching-page-content">
-            <div class="row multi-search-block">
-                <div class="col-sm-12 col-md-8">
-                    <div class="col-md-3">
+            <div class="multi-search-block">
+                <div class="search-action-group">
+                    <div class="neighborh-search">
                         <input class="dropdown" type="text" placeholder="Select Neighborh">
                     </div>
-                    <div class="col-md-3 col-sm-12 col-xs-12">
+                    <div class="mobile-search-toggle ">
+                        <label>+</label>
+                    </div>
+                    <div class="bed-search">
                         <div class="dropdown" id="bed-search-filter">Beds
                             <ul class="popup checklist">
                                 <li>
@@ -89,7 +93,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-md-3 col-sm-12 col-xs-12">
+                    <div class="price-search">
                         <div class="dropdown" id="price-search-filter">Price
                             <ul class="popup price_selection">
                                 <input type="text" placeholder="Minimum">
@@ -98,7 +102,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-md-3 col-sm-12 col-xs-12">
+                    <div class="more-search">
                         <div class="dropdown" id="more-search-filter">More
                             <ul class="popup features features-filters" id="features-filters">
                                 <a href="#" class="c0-icon c0-icon--close search1506-closeFeaturesFiltersBtn"></a>
@@ -256,7 +260,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 ">
+                <div class="map-toggle-action">
                     <div class="view-toggle">
                         <ul>
                             <li id="map-toggle">
@@ -268,6 +272,7 @@
                         </ul>
                     </div>
                 </div>
+                <div class="clr"></div>
             </div>
             <div class="search-container">
                 <div class="listings_results_content">
@@ -289,7 +294,7 @@
                             </div>
                             <div class="clr"></div>
                         </div>
-                        <div class="listing-results"> 
+                        <div class="listing-results">
                             <div class="search-listing-block">
                                 <div class="block-image"></div>
                                 <div class="block-info">
@@ -313,29 +318,8 @@
                                     <div>6 BA</div>
                                     <div>$11,250,000</div>
                                 </div>
-                            </div><div class="search-listing-block">
-                                <div class="block-image"></div>
-                                <div class="block-info">
-                                    <p class="block-street-info">100 Pierrepont Street</p>
-                                    <p class="block-dir-info">Brooklyn Heights</p>
-                                </div>
-                                <div class="block-featured">
-                                    <div>5 BD</div>
-                                    <div>6 BA</div>
-                                    <div>$11,250,000</div>
-                                </div>
-                            </div><div class="search-listing-block">
-                                <div class="block-image"></div>
-                                <div class="block-info">
-                                    <p class="block-street-info">100 Pierrepont Street</p>
-                                    <p class="block-dir-info">Brooklyn Heights</p>
-                                </div>
-                                <div class="block-featured">
-                                    <div>5 BD</div>
-                                    <div>6 BA</div>
-                                    <div>$11,250,000</div>
-                                </div>
-                            </div><div class="search-listing-block">
+                            </div>
+                            <div class="search-listing-block">
                                 <div class="block-image"></div>
                                 <div class="block-info">
                                     <p class="block-street-info">100 Pierrepont Street</p>
@@ -347,18 +331,42 @@
                                     <div>$11,250,000</div>
                                 </div>
                             </div>
+                            <div class="search-listing-block">
+                                <div class="block-image"></div>
+                                <div class="block-info">
+                                    <p class="block-street-info">100 Pierrepont Street</p>
+                                    <p class="block-dir-info">Brooklyn Heights</p>
+                                </div>
+                                <div class="block-featured">
+                                    <div>5 BD</div>
+                                    <div>6 BA</div>
+                                    <div>$11,250,000</div>
+                                </div>
+                            </div>
+                            <div class="search-listing-block">
+                                <div class="block-image"></div>
+                                <div class="block-info">
+                                    <p class="block-street-info">100 Pierrepont Street</p>
+                                    <p class="block-dir-info">Brooklyn Heights</p>
+                                </div>
+                                <div class="block-featured">
+                                    <div>5 BD</div>
+                                    <div>6 BA</div>
+                                    <div>$11,250,000</div>
+                                </div>
+                            </div>
+                            <div class="clr"></div>
+                        </div>
+                        <div class="listings_map_column">
+                            <div class="map-multi-search">
+                            </div>
+                        </div>
                         <div class="clr"></div>
                     </div>
-                    <div class="listings_map_column">
-                        <div class="map-multi-search">
-                        </div>
-                    </div>
-                    <div class="clr"></div>
                 </div>
             </div>
         </div>
-    </div>
-    <script src="js/bootstrap.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
 </body>
 
 </html>

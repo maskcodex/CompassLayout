@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Compass</title>
+    <meta name="description" content="The HTML5 Herald">
+    <meta name="author" content="SitePoint">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css?v=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="js/index.js"></script>
+    <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="page-header" rol="header" class="border-bottom">
+            <div id="page-logo-header">
+                <p>Compass</p>
+            </div>
+            <div id="mobile-header-nav-icon">
+                <img src="images/menu-icon-dark.png">
+            </div>
+            <nav id="page-header-nav">
+                <ul>
+                    <li>Our Agents</li>
+                    <li>Buy</li>
+                    <li>Sell</li>
+                    <li>Rent</li>
+                    <li>New Development</li>
+                    <li>London</li>
+                    <li>Login</li>
+                </ul>
+            </nav>
+            <nav id="mobile-header-nav">
+                <div id="left-bg"></div>
+                <ul>
+                    <li>Our Agents</li>
+                    <li>Buy</li>
+                    <li>Sell</li>
+                    <li>Rent</li>
+                    <li>New Development</li>
+                    <li>London
+                        <ul class="sub-menu">
+                            <li>London 1</li>
+                            <li>London 1</li>
+                            <li>London 1</li>
+                        </ul>
+                    </li>
+                    <li>Login</li>
+                </ul>
+            </nav>
+        </header>
+        <div class="sell-page-content">
+            <div class="first-home-info">
+                <h1>Tell us about your home.</h1>
+                <form>
+                    <div>
+                        <label>I live at </label>
+                        <input class="special-text-input" type="text">,
+                        <label> Unit </label>
+                        <input class="special-text-input" type="text" size="2">
+                    </div>
+                    <div>
+                        <label>It's is a</label>
+                        <select class="special-select-input" value="">
+                            <option>0</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5+</option>
+                        </select>
+                        <label>bedroom and</label>
+                        <select class="special-select-input">
+                            <option>1</option>
+                            <option>1.5</option>
+                            <option>2</option>
+                            <option>2.5</option>
+                            <option>3</option>
+                            <option>3.5</option>
+                            <option>4</option>
+                            <option>4.5</option>
+                            <option>5+</option>
+                        </select>
+                        <label>bathroom</label>
+                        <select class="special-select-input">
+                            <option>Condo</option>
+                            <option>Co-op</option>
+                            <option>Condo-op</option>
+                            <option>Single-Family Townhouse</option>
+                            <option>Multi-Family Townhouse</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label>The size is approximately</label>
+                        <input class="special-text-input" type="text" size="3">
+                        <label> Square feet </label>
+                    </div>
+                    <input class="blue-button" type="submit" value="Next">
+                </form>
+            </div>
+
+            <div class="sell-home-contact">
+                <h1>Partner with one of our expert agents to receive your customized report.</h1>
+                <form>
+                    <div><input type="text" placeholder="Name"></div>
+                    <div><input type="text" placeholder="Email"></div>
+                    <div><input type="text" placeholder="Phone"></div>
+                    <input type="submit" value="Let's connect">
+                </form>
+            </div>
+        </div>
+        <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>
