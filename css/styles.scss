@@ -1328,11 +1328,11 @@ button:hover {
     font-style: normal;
     font-weight: 400;
     overflow: auto;
+    color: #666;
 
     h1 {
         text-align: center;
         font-size: 42px;
-        color: #000;
         padding: 50px 10px;
         line-height: 42px;
     }
@@ -1341,6 +1341,12 @@ button:hover {
 .first-home-info {
     width: 80%;
     margin: 0 auto;
+    -webkit-animation: show 2s ;
+    -moz-animation:    show 2s ;
+    -o-animation:      show 2s ;
+    animation:         show 2s ;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
 }
 
 .first-home-info form {
@@ -1383,6 +1389,13 @@ button:hover {
 .sell-home-contact {
     width: 80%;
     margin: 0 auto;
+    display: none;
+    -webkit-animation: show 1s;
+    -moz-animation:    show 1s;
+    -o-animation:      show 1s;
+    animation:         show 1s;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
 }
 
 .sell-home-contact form {
@@ -1415,6 +1428,25 @@ button:hover {
         line-height: 70px;
         font-size: 18px;
     }
+}
+
+
+/*--------------------- ANIMATION --------------------------*/
+@-webkit-keyframes show {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@-moz-keyframes show {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@-o-keyframes show {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@keyframes show {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
 }
 
 /*--------------------- REPONSIVE --------------------------*/

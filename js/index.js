@@ -134,3 +134,9 @@ function hide_popup_all() {
         $(this).hide();
     });
 }
+
+
+function sell_contact () {
+    $('.first-home-info').hide();
+    $('.sell-home-contact').show();
+}
