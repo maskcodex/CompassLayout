@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
-
+<?php echo "dasdasdsad" ?>
 <head>
     <meta charset="utf-8">
     <title>Compass</title>
@@ -754,16 +754,8 @@
             function ScaleSlider() {
                 var refSize = jssor_1_slider.$Elmt.parentNode.clientWidth;
                 if (refSize) {
-                    refSize = Math.min(refSize, 1024);
+                    refSize = Math.min(refSize, 1366);
                     jssor_1_slider.$ScaleWidth(refSize);
-                } else {
-                    window.setTimeout(ScaleSlider, 30);
-                }
-
-                var refSize = jssor_1_slider.$Elmt.parentNode.clientHeight;
-                if (refSize) {
-                   // refSize = Math.min(refSize, 1366);
-                    jssor_1_slider.$ScaleHeight(refSize);
                 } else {
                     window.setTimeout(ScaleSlider, 30);
                 }
@@ -780,7 +772,7 @@
             position: absolute;
             /* size of thumbnail navigator container */
             width: 100%;
-            height: 100px;
+            height: 150px;
         }
         
         .jssort07 .p {
@@ -902,13 +894,13 @@
         }
         </style>
         <div style="margin-top: 30px;">
-            <div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 1024px; height: 768px ; overflow: hidden; visibility: hidden;">
+            <div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 768px; height: ; overflow: hidden; visibility: hidden;">
                 <!-- Loading Screen -->
                 <div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
                     <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
                     <div style="position:absolute;display:block;background:url('img/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
                 </div>
-                <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 1024px; height: 568px; overflow: hidden;">
+                <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 768px; height: 800px; overflow: hidden;">
                     <div style="display: none;">
                         <img data-u="image" src="images/2015/09/640x48022.jpg" />
                         <img u="thumb" src="images/2015/09/640x48022.jpg" />
@@ -961,7 +953,9 @@
                 </div>
                 
             </div>
-        </div>        
+        </div>
+
+        
     </div>
 </body>
 
