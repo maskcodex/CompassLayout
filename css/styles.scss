@@ -1402,7 +1402,7 @@ button:hover {
 .blue-button {
     @extend button;
     background: #0660cc;
-    margin-top: 20px; 
+    margin: 20px auto;
 }
 
 .sell-home-contact {
