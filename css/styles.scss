@@ -1447,6 +1447,102 @@ button:hover {
     }
 }
 
+.page-header-block {
+    margin: 50px auto;
+    max-width: 440px;
+    text-align: center;
+
+    h2 {
+        font-size: 40px;
+        font-family: 'Harmonia Sans',Helvetica,Arial,sans-serif;
+        font-weight: 600;
+        font-style: normal;
+        padding: 15px;
+        line-height: 40px;
+    }
+
+    p {
+        font-family: 'Harmonia Sans',Helvetica,Arial,sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 16px;
+        line-height: 28px;
+    }
+}
+
+.block-group {
+    width: 1200px;
+    margin: 20px auto;
+}
+
+.development-block {
+    padding: 15px;
+    height: 350px;
+}
+
+.development-block-left {
+    width: 50%;
+    float: left;
+    height: 100%;
+
+    img { 
+        width: 100%;
+    }
+}
+
+.development-img {
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/development.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.development-block-right {
+    width: 50%;
+    float: left;
+    background: white;
+    position: relative;
+    height: 100%;
+    border-bottom: 1px solid #000;
+
+    > div {
+        padding: 15px;
+    }
+
+    a {
+        position: absolute;
+        left: 15px;
+        bottom: 15px;
+        border-bottom: 1px solid #000;
+        font-size: 0.8em;
+    }
+
+    a:hover {
+        color: #333;
+        border-color: #333;
+    }
+}
+
+.development-editorial {
+    font-family: 'Tiempos Text',Times,'Times New Roman',serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 28px;
+    padding-bottom: 10px;
+    padding-top:10px;
+}
+
+.development-heading {
+    font-size: 36px;
+    font-family: 'Tiempos Headline',Times,'Times New Roman',serif;
+    font-weight: 600;
+    font-style: normal;
+    padding-bottom: 10px;
+    padding-top:10px;
+}
+
 
 /*--------------------- ANIMATION --------------------------*/
 @-webkit-keyframes show {
@@ -1648,6 +1744,26 @@ button:hover {
             display: block;
         }
     }
+
+    .block-group {
+        width: 98%;
+        margin: 20px auto;
+    }
+
+    .development-block-left {
+        width: 100%;
+        height: 350px;
+    }
+
+    .development-block-right {
+        width: 100%;
+        height: 350px;
+    }
+
+    .development-block {
+        height: 700px;
+        margin-bottom: 30px;
+    }
 }
 
 /* Smartphones (portrait) ----------- */
@@ -1836,6 +1952,27 @@ button:hover {
         }
     }
 
+
+    .block-group {
+        width: 98%;
+        margin: 20px auto;
+    }
+
+    .development-block-left {
+        width: 100%;
+        height: 350px;
+    }
+
+    .development-block-right {
+        width: 100%;
+        height: 350px;
+    }
+
+    .development-block {
+        height: 700px;
+        margin-bottom: 30px;
+    }
+
 }
 
 
@@ -1984,6 +2121,11 @@ button:hover {
         }
     }
 
+    .block-group {
+        width: 98%;
+        margin: 20px auto;
+    }
+
 }
 
 @media only screen  and (min-width : 1023px) and (max-width : 1224px) {
@@ -2045,6 +2187,11 @@ button:hover {
         top: 100px;
         bottom: 0;
         z-index: 100;
+    }
+
+    .block-group {
+        width: 98%;
+        margin: 20px auto;
     }
 }
 
