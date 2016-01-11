@@ -106,6 +106,7 @@ $(document).ready(function() {
         $(".bed-search").toggle();
         $(".mobile-search-toggle label").text(text);
     });
+
 });
 
 
@@ -140,4 +141,14 @@ function hide_popup_all() {
 function sell_contact () {
     $('.first-home-info').hide();
     $('.sell-home-contact').show();
+}
+
+function viewmap() {
+    $('body').append('<div class="map-full-page"><div class="cancel-fullmap" onclick="cancel_fullmap()"><img src="images/cancel-icon-dark.png"></div></div>');
+    disable_scroll();
+}
+
+function cancel_fullmap () {
+    $('.map-full-page').remove();
+    enable_scroll();
 }

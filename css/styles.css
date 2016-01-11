@@ -2,7 +2,7 @@
   box-sizing: border-box; }
 
 body {
-  background: #f3f3f3;
+  background: #e3e3e3;
   -webkit-font-smoothing: antialiased;
   font-family: 'Roboto', Helvetica, Arial, sans-serif; }
 
@@ -201,7 +201,8 @@ button:hover, .blue-button:hover {
   height: 80px;
   color: white;
   background-color: transparent;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.25); }
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  font-family: 'Roboto', Helvetica, Arial, sans-serif; }
 
 #logo-header, #page-logo-header {
   color: white;
@@ -573,11 +574,12 @@ button:hover, .blue-button:hover {
   position: relative;
   color: black;
   background: white;
-  height: 81px; }
+  height: 81px;
+  font-family: 'Roboto', Helvetica, Arial, sans-serif; }
 
 .agent-page-content {
   margin: 0 auto;
-  max-width: 85%;
+  max-width: 95%;
   min-height: 300px; }
 
 .agent-page-content .block-page .row > div {
@@ -718,6 +720,24 @@ button:hover, .blue-button:hover {
     cursor: pointer;
     text-align: center; }
 
+.map-full-page {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: white;
+  z-index: 1000000; }
+
+.cancel-fullmap {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  right: 20px;
+  top: 20px; }
+  .cancel-fullmap img {
+    width: 100%; }
+
 .key-style {
   font-weight: 600;
   font-size: 24px; }
@@ -729,7 +749,7 @@ button:hover, .blue-button:hover {
   line-height: 28px; }
 
 .overview {
-  font-family: "Tiempos Text",Times,"Times New Roman",serif;
+  font-family: "Tiempos Text", Times, "Times New Roman", serif;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -837,7 +857,10 @@ button:hover, .blue-button:hover {
   float: left;
   width: 80%; }
 
-.neighborh-search, .bed-search, .price-search, .more-search {
+.neighborh-search,
+.bed-search,
+.price-search,
+.more-search {
   display: inline-block;
   min-width: 15%;
   margin: 1%;
@@ -939,6 +962,8 @@ button:hover, .blue-button:hover {
   line-height: 16px; }
 .features-filters #filter_baths li input {
   display: none; }
+.features-filters #filter_baths li input:checked + label {
+  color: black; }
 
 .sales_filter #min_square_footage {
   border: 1px solid #e8e8e8;
@@ -1016,7 +1041,7 @@ button:hover, .blue-button:hover {
   line-height: 20px;
   color: #000;
   font-size: 36px;
-  font-family: "Tiempos Headline",Times,"Times New Roman",serif;
+  font-family: "Tiempos Headline", Times, "Times New Roman", serif;
   font-style: normal; }
 
 .agent-single-info p {
@@ -1039,18 +1064,22 @@ button:hover, .blue-button:hover {
   background-color: #000;
   color: #fff; }
 
+.agent-single-des {
+  width: 100%; }
+
 .agent-single-des h2 {
   font-size: 24px;
-  font-family: "Harmonia Sans",Helvetica,Arial,sans-serif;
+  font-family: "Harmonia Sans", Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: 600; }
 
 .agent-single-des p {
-  font-family: "Tiempos Text",Times,"Times New Roman",serif;
+  font-family: "Tiempos Text", Times, "Times New Roman", serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
-  line-height: 28px; }
+  line-height: 28px;
+  width: 100%; }
 
 .agent-listing-block {
   float: left;
@@ -1200,13 +1229,13 @@ button:hover, .blue-button:hover {
   text-align: center; }
   .page-header-block h2 {
     font-size: 40px;
-    font-family: 'Harmonia Sans',Helvetica,Arial,sans-serif;
+    font-family: 'Harmonia Sans', Helvetica, Arial, sans-serif;
     font-weight: 600;
     font-style: normal;
     padding: 15px;
     line-height: 40px; }
   .page-header-block p {
-    font-family: 'Harmonia Sans',Helvetica,Arial,sans-serif;
+    font-family: 'Harmonia Sans', Helvetica, Arial, sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: 16px;
@@ -1254,7 +1283,7 @@ button:hover, .blue-button:hover {
     border-color: #333; }
 
 .development-editorial {
-  font-family: 'Tiempos Text',Times,'Times New Roman',serif;
+  font-family: 'Tiempos Text', Times, 'Times New Roman', serif;
   font-weight: 400;
   font-style: normal;
   font-size: 16px;
@@ -1264,11 +1293,117 @@ button:hover, .blue-button:hover {
 
 .development-heading {
   font-size: 36px;
-  font-family: 'Tiempos Headline',Times,'Times New Roman',serif;
+  font-family: 'Tiempos Headline', Times, 'Times New Roman', serif;
   font-weight: 600;
   font-style: normal;
   padding-bottom: 10px;
   padding-top: 10px; }
+
+/*--------------------- NEIGHBOORH --------------------------*/
+.page-content {
+  margin: 0 auto;
+  max-width: 98%;
+  min-height: 300px; }
+
+.list-neighborhood-header {
+  width: 100%;
+  height: 500px;
+  background-image: url("../images/nyc_neighborhood_guides.png");
+  background-size: cover;
+  background-position: center;
+  position: relative; }
+
+.neighborhood-title-head {
+  width: 100%;
+  height: 130px;
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  max-width: 85%;
+  color: white;
+  line-height: 130px;
+  font-size: 30px;
+  font-weight: 600;
+  text-align: center;
+  border-top: solid 2px white; }
+
+.neighborhood-block {
+  float: left;
+  width: 31.3333%;
+  margin: 1%;
+  height: 200px;
+  background-image: url("../images/nyc_neighborhood_guides.png");
+  background-size: cover;
+  background-position: center;
+  position: relative; }
+  .neighborhood-block h4 {
+    width: 100%;
+    height: 36px;
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: white;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 36px;
+    text-align: center;
+    font-family: 'Harmonia Sans', Helvetica, Arial, sans-serif; }
+
+.overlay {
+  position: absolute;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  transition: background-color 0.2s linear;
+  cursor: pointer; }
+
+.overlay:hover {
+  background: rgba(0, 0, 0, 0.1); }
+
+.neighborhood-description {
+  width: 85%;
+  margin: 50px auto;
+  padding: 15px;
+  background: white;
+  font-family: 'Roboto', Helvetica, Arial, sans-serif; }
+  .neighborhood-description h2 {
+    text-align: center;
+    font-weight: 600; }
+
+.neighborhood-map {
+  width: 85%;
+  margin: 50px auto;
+  background: white; }
+  .neighborhood-map img {
+    padding: 15px;
+    width: 100%;
+    box-shadow: 0 0 7px #b5b5b5; }
+
+.neighborhood-block-title {
+  text-align: center;
+  font-weight: 600; }
+
+.neighborhood-content {
+  width: 85%;
+  margin: 50px auto;
+  background: white;
+  text-align: center;
+  padding: 50px 25px; }
+  .neighborhood-content h2 {
+    text-align: center;
+    font-weight: 600; }
+  .neighborhood-content p {
+    font-family: 'Tiempos Text',Times,'Times New Roman',serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 28px; }
 
 /*--------------------- ANIMATION --------------------------*/
 @-webkit-keyframes show {
@@ -1295,6 +1430,67 @@ button:hover, .blue-button:hover {
 
   100% {
     opacity: 1; } }
+/***********************NEW CUSTOM *****************************/
+#map-toggle img,
+#list-toggle img {
+  width: 24px;
+  height: 24px; }
+
+.block-agent-transaction {
+  width: 100%; }
+  .block-agent-transaction h3 {
+    padding: 10px;
+    font-size: 24px;
+    color: black;
+    font-weight: 600; }
+
+.agent-transaction-block {
+  width: 48%;
+  margin: 1%;
+  float: left;
+  background: white;
+  position: relative; }
+
+.agent-transaction-block .block-image {
+  width: 120px;
+  height: 120px;
+  float: left;
+  margin-right: 15px; }
+  .agent-transaction-block .block-image img {
+    width: 100%;
+    height: 100%; }
+
+.agent-transaction-block .block-street-info {
+  height: 35px; }
+
+.agent-transaction-block .block-dir-info {
+  height: 35px;
+  line-height: 35px; }
+
+.agent-transaction-block .block-featured {
+  border-bottom: solid 2px black;
+  height: 50px;
+  bottom: 0;
+  left: 120px; }
+  .agent-transaction-block .block-featured > div {
+    height: 50px;
+    line-height: 50px; }
+
+.agent-transaction-block .block-info .block-dir-info {
+  padding-top: 10px; }
+
+.siged {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  font-size: 14px;
+  width: 120px;
+  height: 40px;
+  background-color: rgba(227, 124, 78, 0.9);
+  color: white;
+  line-height: 40px;
+  text-align: center; }
+
 /*--------------------- REPONSIVE --------------------------*/
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
@@ -1309,20 +1505,48 @@ button:hover, .blue-button:hover {
     height: 190px;
     width: 290px; }
 
-  .footer-block2, .footer-block3 {
+  .block-agent-single {
+    width: 95%; }
+
+  .footer-block2,
+  .footer-block3 {
     display: none; }
 
   .footer-block1 {
     text-align: center; }
 
   .block-agent-info {
-    width: 98%; } }
+    width: 98%; }
+
+  .agent-transaction-block {
+    width: 100%;
+    margin: 0 auto;
+    float: none;
+    margin-bottom: 25px; }
+
+  .agent-transaction-block .block-image {
+    display: none; }
+
+  .agent-transaction-block .block-street-info, .agent-transaction-block .block-dir-info {
+    text-align: left; }
+
+  .neighborhood-block {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0; }
+
+  .page-content {
+    width: 85%; } }
 @media only screen and (max-width: 480px) {
-  .footer-block2, .footer-block3 {
+  .footer-block2,
+  .footer-block3 {
     display: none; }
 
   .footer-block1 {
     text-align: center; }
+
+  .block-agent-single {
+    width: 95%; }
 
   #home-content {
     max-width: 300px; }
@@ -1376,7 +1600,8 @@ button:hover, .blue-button:hover {
     margin: 20px auto;
     float: none; }
 
-  #header-nav, #page-header-nav, #page-header-nav {
+  #header-nav, #page-header-nav,
+  #page-header-nav {
     display: none; }
 
   #mobile-header-nav-icon {
@@ -1411,7 +1636,9 @@ button:hover, .blue-button:hover {
   .neighborh-search {
     width: 90%; }
 
-  .bed-search, .price-search, .more-search {
+  .bed-search,
+  .price-search,
+  .more-search {
     display: none;
     width: 100%;
     text-align: left; }
@@ -1451,7 +1678,27 @@ button:hover, .blue-button:hover {
 
   .development-block {
     height: 700px;
-    margin-bottom: 30px; } }
+    margin-bottom: 30px; }
+
+  .agent-transaction-block {
+    width: 100%;
+    margin: 0 auto;
+    float: none;
+    margin-bottom: 25px; }
+
+  .agent-transaction-block .block-image {
+    display: none; }
+
+  .agent-transaction-block .block-street-info, .agent-transaction-block .block-dir-info {
+    text-align: left; }
+
+  .neighborhood-block {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0; }
+
+  .page-content {
+    width: 85%; } }
 /* Smartphones (portrait) ----------- */
 @media only screen and (max-width: 768px) and (min-width: 480px) {
   /* Styles */
@@ -1482,7 +1729,8 @@ button:hover, .blue-button:hover {
     height: 190px;
     width: 290px; }
 
-  .footer-block2, .footer-block3 {
+  .footer-block2,
+  .footer-block3 {
     display: none; }
 
   .footer-block1 {
@@ -1532,7 +1780,8 @@ button:hover, .blue-button:hover {
   .block-agent-single > div {
     text-align: center; }
 
-  #header-nav, #page-header-nav, #page-header-nav {
+  #header-nav, #page-header-nav,
+  #page-header-nav {
     display: none; }
 
   #mobile-header-nav-icon {
@@ -1567,7 +1816,9 @@ button:hover, .blue-button:hover {
   .neighborh-search {
     width: 90%; }
 
-  .bed-search, .price-search, .more-search {
+  .bed-search,
+  .price-search,
+  .more-search {
     display: none;
     width: 100%;
     text-align: left; }
@@ -1607,12 +1858,34 @@ button:hover, .blue-button:hover {
 
   .development-block {
     height: 700px;
-    margin-bottom: 30px; } }
+    margin-bottom: 30px; }
+
+  .agent-transaction-block {
+    width: 100%;
+    margin: 0 auto;
+    float: none;
+    margin-bottom: 25px; }
+
+  .agent-transaction-block .block-street-info, .agent-transaction-block .block-dir-info {
+    text-align: left; }
+
+  .neighborhood-block {
+    width: 48%;
+    margin: 1%; }
+
+  .page-content {
+    width: 86%; } }
 @media only screen and (max-width: 1024px) and (min-width: 768px) {
   .listings_results_column {
     padding: 10px 35px 20px 35px !important;
     width: 380px;
     float: left; }
+
+  .block-agent-single {
+    width: 95%; }
+
+  .footer-block1 {
+    text-align: center; }
 
   .listings_map_column {
     position: fixed;
@@ -1659,7 +1932,8 @@ button:hover, .blue-button:hover {
     height: 190px;
     width: 290px; }
 
-  #header-nav, #page-header-nav, #page-header-nav {
+  #header-nav, #page-header-nav,
+  #page-header-nav {
     display: none; }
 
   #mobile-header-nav-icon {
@@ -1694,7 +1968,9 @@ button:hover, .blue-button:hover {
   .neighborh-search {
     width: 90%; }
 
-  .bed-search, .price-search, .more-search {
+  .bed-search,
+  .price-search,
+  .more-search {
     display: none;
     width: 100%;
     text-align: left; }
@@ -1722,7 +1998,13 @@ button:hover, .blue-button:hover {
 
   .block-group {
     width: 98%;
-    margin: 20px auto; } }
+    margin: 20px auto; }
+
+  .agent-transaction-block {
+    width: 100%;
+    margin: 0 auto;
+    float: none;
+    margin-bottom: 25px; } }
 @media only screen and (min-width: 1023px) and (max-width: 1224px) {
   #home-content {
     width: 680px; }
@@ -1732,6 +2014,9 @@ button:hover, .blue-button:hover {
 
   #home-info-action h1 {
     width: 60%; }
+
+  .block-agent-single {
+    width: 95%; }
 
   #home-info-action .group-button {
     width: 40%; }
@@ -1815,7 +2100,7 @@ button:hover, .blue-button:hover {
     bottom: 0;
     z-index: 100; }
 
-  .block-agent-single {
+  .block-agent-single, .agent-single, .page-content, .neighborhood-title-head {
     width: 1200px; }
 
   .agent-single-listing {
@@ -1891,12 +2176,12 @@ button:hover, .blue-button:hover {
 
 /* jssor slider bullet navigator skin 13 css */
 /*
-    .jssorb13 div           (normal)
-    .jssorb13 div:hover     (normal mouseover)
-    .jssorb13 .av           (active)
-    .jssorb13 .av:hover     (active mouseover)
-    .jssorb13 .dn           (mousedown)
-    */
+        .jssorb13 div           (normal)
+        .jssorb13 div:hover     (normal mouseover)
+        .jssorb13 .av           (active)
+        .jssorb13 .av:hover     (active mouseover)
+        .jssorb13 .dn           (mousedown)
+        */
 .jssorb13 {
   position: absolute; }
 
@@ -1946,9 +2231,9 @@ button:hover, .blue-button:hover {
   overflow: hidden; }
 
 /*
-        .jssora03l { background-position: -3px -33px; }
-        .jssora03r { background-position: -63px -33px; }
-        .jssora03l:hover { background-position: -123px -33px; }
-        .jssora03r:hover { background-position: -183px -33px; }
-        .jssora03l.jssora03ldn { background-position: -243px -33px; }
-        .jssora03r.jssora03rdn { background-position: -303px -33px; }*/
+            .jssora03l { background-position: -3px -33px; }
+            .jssora03r { background-position: -63px -33px; }
+            .jssora03l:hover { background-position: -123px -33px; }
+            .jssora03r:hover { background-position: -183px -33px; }
+            .jssora03l.jssora03ldn { background-position: -243px -33px; }
+            .jssora03r.jssora03rdn { background-position: -303px -33px; }*/

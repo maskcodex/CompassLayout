@@ -1,4 +1,4 @@
-$default-background: #f3f3f3;
+$default-background: #e3e3e3;
 * {
     box-sizing: border-box;
 }
@@ -103,6 +103,7 @@ a:hover {
     color: inherit;
     text-decoration: none;
 }
+
 
 /* HTML5 display-role reset for older browsers */
 
@@ -223,6 +224,7 @@ button:hover {
     color: white;
     background-color: transparent;
     border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+    font-family: 'Roboto', Helvetica, Arial, sans-serif;
 }
 
 #logo-header {
@@ -240,7 +242,6 @@ button:hover {
     @extend #logo-header;
     color: black;
 }
-
 
 #header-nav {
     position: absolute;
@@ -263,7 +264,6 @@ button:hover {
 
 #page-header-nav {
     @extend #header-nav;
-
     ul li:hover {
         border-bottom: solid 2px black;
         color: #ccc;
@@ -353,11 +353,10 @@ button:hover {
     top: 0;
     right: 0;
     left: 0;
-    background: rgba(0,0,0,.5);
+    background: rgba(0, 0, 0, .5);
     bottom: 0;
     z-index: 1001;
     font-family: 'Roboto', Helvetica, Arial, sans-serif;
-    
     ul {
         padding-top: 15px;
         width: 300px;
@@ -367,7 +366,6 @@ button:hover {
         left: 100%;
         bottom: 0;
     }
-
     ul img {
         position: absolute;
         top: 25px;
@@ -376,7 +374,6 @@ button:hover {
         height: 25px;
         z-index: 1200;
     }
-
     ul li {
         height: auto;
         font-size: 17px;
@@ -387,19 +384,17 @@ button:hover {
         line-height: 30px;
         position: relative;
     }
-
     ul.sub-menu {
         position: relative;
         margin-left: -300px;
     }
-
     ul.sub-menu li {
         padding: 5px 25px;
         font-size: 13px;
         font-family: 'Roboto', Helvetica, Arial, sans-serif;
         font-style: normal;
         font-weight: 400;
-    }    
+    }
 }
 
 #mobile-header-nav #left-bg {
@@ -423,8 +418,8 @@ button:hover {
 }
 
 #exclusive-block {
-	max-width: 100%;
-	margin: 0 auto;
+    max-width: 100%;
+    margin: 0 auto;
     padding-top: 40px;
     text-align: center;
 }
@@ -437,7 +432,7 @@ button:hover {
 }
 
 #home-info-action {
-    padding-top:60px;
+    padding-top: 60px;
     h1 {
         font-size: 40px;
         margin: 0 auto;
@@ -460,7 +455,6 @@ button:hover {
 #home-info-action .group-button {
     width: 60%;
     margin: 0 auto;
-
     li {
         width: 50%;
         display: inline-block;
@@ -471,12 +465,10 @@ button:hover {
         cursor: pointer;
         font-weight: bold;
     }
-
     li.activated {
         background: black;
         color: white;
     }
-
     li.activated:hover {
         background: #2F2F2F;
     }
@@ -486,7 +478,6 @@ button:hover {
     width: 80%;
     margin: 60px auto;
     display: none;
-
     h2 {
         font-size: 30px;
         font-weight: bold;
@@ -494,7 +485,6 @@ button:hover {
         margin-bottom: 25px;
         margin-top: 25px;
     }
-
     p {
         font-size: 16px;
         line-height: 28px;
@@ -522,7 +512,6 @@ button:hover {
         width: 80%;
         margin-left: 10%;
     }
-
     button {
         float: right;
     }
@@ -533,9 +522,7 @@ button:hover {
     margin: 60px auto;
 }
 
-.group-img-link {
-
-}
+.group-img-link {}
 
 .group-img-link .link-block {
     width: 46%;
@@ -546,18 +533,17 @@ button:hover {
     position: relative;
     background-size: cover;
     background-position: center;
-    background-image: url('../images/2015/06/IMG_7507.jpg'); 
+    background-image: url('../images/2015/06/IMG_7507.jpg');
 }
 
 .link-block .link-info {
     width: 80%;
     height: 150px;
     margin: 75px auto;
-    background: rgba(0,0,0,0.5);
+    background: rgba(0, 0, 0, 0.5);
     border-top: solid 1px white;
     color: white;
     text-align: center;
-
     h3 {
         font-size: 30px;
         font-weight: bold;
@@ -611,17 +597,15 @@ button:hover {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     padding-left: 9px;
-
     div {
-    	display: inline-block;
-    	padding: 5px;
+        display: inline-block;
+        padding: 5px;
     }
 }
 
 .listing-block-featured {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
-   
     div {
         display: inline-block;
         padding: 5px;
@@ -677,15 +661,16 @@ button:hover {
     color: black;
     background: white;
     height: 81px;
+    font-family: 'Roboto', Helvetica, Arial, sans-serif;
 }
 
 .agent-page-content {
     margin: 0 auto;
-    max-width: 85%;
+    max-width: 95%;
     min-height: 300px;
 }
 
-.agent-page-content .block-page .row > div{
+.agent-page-content .block-page .row > div {
     padding: 10px;
 }
 
@@ -831,35 +816,56 @@ button:hover {
 .adress-action {
     font-family: 'Roboto', Helvetica, Arial, sans-serif;
     float: right;
-
     p {
-    color: black;
-    font-weight: bold;
-    border: none;
-    width: 270px;
-    min-width: 250px;
-    padding: 16px 32px;
-    font-size: 18px;
-    line-height: 18px;
-    cursor: pointer;
-    text-align: center;
+        color: black;
+        font-weight: bold;
+        border: none;
+        width: 270px;
+        min-width: 250px;
+        padding: 16px 32px;
+        font-size: 18px;
+        line-height: 18px;
+        cursor: pointer;
+        text-align: center;
+    }
+}
+
+.map-full-page {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background: white;
+    z-index: 1000000;
+}
+
+.cancel-fullmap {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+
+    img {
+        width: 100%;
     }
 }
 
 .key-style {
     font-weight: 600;
-    font-size: 24px;  
+    font-size: 24px;
 }
 
-.key-text {  
+.key-text {
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
-    line-height: 28px; 
+    line-height: 28px;
 }
 
 .overview {
-    font-family: "Tiempos Text",Times,"Times New Roman",serif;
+    font-family: "Tiempos Text", Times, "Times New Roman", serif;
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
@@ -976,7 +982,6 @@ button:hover {
         width: 100%;
         border: 1px solid #e8e8e8;
     }
-
     div.col-sm-3 {
         padding: 5px;
     }
@@ -991,7 +996,10 @@ button:hover {
     width: 80%;
 }
 
-.neighborh-search, .bed-search, .price-search, .more-search {
+.neighborh-search,
+.bed-search,
+.price-search,
+.more-search {
     display: inline-block;
     min-width: 15%;
     margin: 1%;
@@ -1007,7 +1015,6 @@ button:hover {
 
 .view-toggle {
     float: right;
-
     ul li {
         float: left;
         height: 49px;
@@ -1017,7 +1024,6 @@ button:hover {
         padding: 10px;
         cursor: pointer;
     }
-
 }
 
 .listings_results_content {
@@ -1040,7 +1046,6 @@ button:hover {
     z-index: 100;
 }
 
-
 .map-multi-search {
     width: 100%;
     height: 100%;
@@ -1049,7 +1054,6 @@ button:hover {
     left: 0;
     top: 0;
     background: #ccc;
-    
 }
 
 .dropdown {
@@ -1065,7 +1069,6 @@ button:hover {
     text-align: left;
     padding: 10px;
     margin-top: 10px;
-
     input {
         margin-right: 10px;
     }
@@ -1073,14 +1076,12 @@ button:hover {
 
 .price_selection {
     width: 300px;
-
     input {
         display: inline-block;
         width: 100px;
         text-align: center;
         border: 1px solid #e8e8e8;
     }
-
     span {
         margin: 0 10px;
         line-height: 31px;
@@ -1093,13 +1094,11 @@ button:hover {
     right: 0;
     overflow-x: hidden;
     overflow-y: auto;
-
     table {
         border-collapse: collapse;
         border-spacing: 0;
         width: 100%;
     }
-
     img {
         width: 25px;
         height: 25px;
@@ -1115,7 +1114,6 @@ button:hover {
         border: 1px solid #e8e8e8;
         text-align: center;
     }
-
     li label {
         display: inline-block;
         text-align: center;
@@ -1124,9 +1122,12 @@ button:hover {
         font-size: 16px;
         line-height: 16px;
     }
-
     li input {
         display: none;
+    }
+
+    li input:checked+label {
+        color: black;
     }
 }
 
@@ -1156,23 +1157,20 @@ button:hover {
     margin-left: 8px;
 }
 
-    .search-listing-block .block-image {
-        width: 100%;
-        height: 190px;
-    }
+.search-listing-block .block-image {
+    width: 100%;
+    height: 190px;
+}
 
-    .search-listing-block .block-info {
+.search-listing-block .block-info {}
 
-    }
-
-    .search-listing-block .block-featured {
-        @extend .block-featured;
-    }
+.search-listing-block .block-featured {
+    @extend .block-featured;
+}
 
 .search_filter_secondary {
     padding: 20px 0;
 }
-
 
 .search_results_sort_by {
     height: 52px;
@@ -1190,12 +1188,10 @@ button:hover {
     float: right;
     height: 52px;
     line-height: 52px;
-
     ul {
         float: left;
         margin-left: 10px;
     }
-
     ul li {
         float: left;
         width: 52px;
@@ -1231,7 +1227,7 @@ button:hover {
     line-height: 20px;
     color: #000;
     font-size: 36px;
-    font-family: "Tiempos Headline",Times,"Times New Roman",serif;
+    font-family: "Tiempos Headline", Times, "Times New Roman", serif;
     font-style: normal;
 }
 
@@ -1259,21 +1255,25 @@ button:hover {
     color: #fff;
 }
 
+.agent-single-des {
+    width: 100%;
+}
+
 .agent-single-des h2 {
     font-size: 24px;
-    font-family: "Harmonia Sans",Helvetica,Arial,sans-serif;
+    font-family: "Harmonia Sans", Helvetica, Arial, sans-serif;
     font-style: normal;
     font-weight: 600;
 }
 
 .agent-single-des p {
-    font-family: "Tiempos Text",Times,"Times New Roman",serif;
+    font-family: "Tiempos Text", Times, "Times New Roman", serif;
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 28px;
+    width: 100%;
 }
-
 
 .agent-listing-block {
     float: left;
@@ -1299,20 +1299,18 @@ button:hover {
     overflow-x: scroll;
     overflow-y: hidden;
     white-space: nowrap;
-
     img {
         display: inline-block;
         width: auto;
     }
 }
 
-
 .slider-full {
     position: fixed;
     width: 100%;
     height: 100%;
     left: 10000px;
-    bottom:0;
+    bottom: 0;
     right: 0;
     top: 0;
     z-index: 20000;
@@ -1346,7 +1344,6 @@ button:hover {
     font-weight: 400;
     overflow: auto;
     color: #666;
-
     h1 {
         text-align: center;
         font-size: 42px;
@@ -1358,10 +1355,10 @@ button:hover {
 .first-home-info {
     width: 80%;
     margin: 0 auto;
-    -webkit-animation: show 2s ;
-    -moz-animation:    show 2s ;
-    -o-animation:      show 2s ;
-    animation:         show 2s ;
+    -webkit-animation: show 2s;
+    -moz-animation: show 2s;
+    -o-animation: show 2s;
+    animation: show 2s;
     -webkit-animation-timing-function: ease-out;
     animation-timing-function: ease-out;
 }
@@ -1378,7 +1375,7 @@ button:hover {
 }
 
 .special-text-input {
-    border:none;
+    border: none;
     border-bottom: solid 1px blue;
     text-align: center;
 }
@@ -1387,8 +1384,8 @@ button:hover {
     outline: none;
 }
 
-.special-select-input { 
-    border:none;
+.special-select-input {
+    border: none;
     border-bottom: solid 1px blue;
     min-width: 55px;
 }
@@ -1408,9 +1405,9 @@ button:hover {
     margin: 0 auto;
     display: none;
     -webkit-animation: show 1s;
-    -moz-animation:    show 1s;
-    -o-animation:      show 1s;
-    animation:         show 1s;
+    -moz-animation: show 1s;
+    -o-animation: show 1s;
+    animation: show 1s;
     -webkit-animation-timing-function: ease-out;
     animation-timing-function: ease-out;
 }
@@ -1420,7 +1417,6 @@ button:hover {
     text-align: center;
     font-size: 24px;
     line-height: 24px;
-
     input[type="text"] {
         border: none;
         background: #eee;
@@ -1431,11 +1427,9 @@ button:hover {
         font-size: 18px;
         min-width: 300px;
     }
-
     input[type="text"]:focus {
         outline: none;
     }
-
     input[type="submit"] {
         background: #0660cc;
         border: none;
@@ -1451,18 +1445,16 @@ button:hover {
     margin: 50px auto;
     max-width: 440px;
     text-align: center;
-
     h2 {
         font-size: 40px;
-        font-family: 'Harmonia Sans',Helvetica,Arial,sans-serif;
+        font-family: 'Harmonia Sans', Helvetica, Arial, sans-serif;
         font-weight: 600;
         font-style: normal;
         padding: 15px;
         line-height: 40px;
     }
-
     p {
-        font-family: 'Harmonia Sans',Helvetica,Arial,sans-serif;
+        font-family: 'Harmonia Sans', Helvetica, Arial, sans-serif;
         font-weight: 400;
         font-style: normal;
         font-size: 16px;
@@ -1484,8 +1476,7 @@ button:hover {
     width: 50%;
     float: left;
     height: 100%;
-
-    img { 
+    img {
         width: 100%;
     }
 }
@@ -1505,11 +1496,9 @@ button:hover {
     position: relative;
     height: 100%;
     border-bottom: 1px solid #000;
-
     > div {
         padding: 15px;
     }
-
     a {
         position: absolute;
         left: 15px;
@@ -1517,7 +1506,6 @@ button:hover {
         border-bottom: 1px solid #000;
         font-size: 0.8em;
     }
-
     a:hover {
         color: #333;
         border-color: #333;
@@ -1525,131 +1513,376 @@ button:hover {
 }
 
 .development-editorial {
-    font-family: 'Tiempos Text',Times,'Times New Roman',serif;
+    font-family: 'Tiempos Text', Times, 'Times New Roman', serif;
     font-weight: 400;
     font-style: normal;
     font-size: 16px;
     line-height: 28px;
     padding-bottom: 10px;
-    padding-top:10px;
+    padding-top: 10px;
 }
 
 .development-heading {
     font-size: 36px;
-    font-family: 'Tiempos Headline',Times,'Times New Roman',serif;
+    font-family: 'Tiempos Headline', Times, 'Times New Roman', serif;
     font-weight: 600;
     font-style: normal;
     padding-bottom: 10px;
-    padding-top:10px;
+    padding-top: 10px;
 }
 
+
+/*--------------------- NEIGHBOORH --------------------------*/
+
+.page-content {
+    margin: 0 auto;
+    max-width: 98%;
+    min-height: 300px;  
+}
+
+.list-neighborhood-header {
+    width: 100%;
+    height: 500px;
+    background-image: url('../images/nyc_neighborhood_guides.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.neighborhood-title-head {
+    width: 100%;
+    height: 130px;
+    background: rgba(0,0,0,.5);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    max-width: 85%;
+    color: white;
+    line-height: 130px;
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+    border-top: solid 2px white;
+}
+
+.neighborhood-block {
+    float: left;
+    width: 31.3333%;
+    margin: 1%;
+    height: 200px;
+    background-image: url('../images/nyc_neighborhood_guides.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+
+    h4 {
+        width: 100%;
+        height: 36px;
+        background: rgba(0,0,0,.5);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        color: white;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 36px;
+        text-align: center;
+        font-family: 'Harmonia Sans', Helvetica, Arial, sans-serif;
+    }
+}
+
+.overlay {
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    transition: background-color 0.2s linear;
+    cursor: pointer;
+}
+
+.overlay:hover {
+    background: rgba(0,0,0,0.1);
+}
+
+.neighborhood-description {
+    width: 85%;
+    margin: 50px auto;
+    padding: 15px;
+    background: white;
+    font-family: 'Roboto', Helvetica, Arial, sans-serif;
+
+    h2 {
+        text-align: center;
+        font-weight: 600;
+    }
+}
+
+.neighborhood-map {
+    width: 85%;
+    margin: 50px auto;
+    background: white;
+
+    img {
+        padding: 15px;
+        width: 100%;
+        box-shadow: 0 0 7px #b5b5b5;
+    }
+}
+
+.neighborhood-block-title {
+    text-align: center;
+    font-weight: 600;
+}
+
+.neighborhood-content {
+    width: 85%;
+    margin: 50px auto;
+    background: white;
+    text-align: center;
+    padding: 50px 25px;
+
+    h2 {
+        text-align: center;
+        font-weight: 600;
+    }
+
+    p {
+        font-family: 'Tiempos Text',Times,'Times New Roman',serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 16px;
+        line-height: 28px;
+    }
+}
 
 /*--------------------- ANIMATION --------------------------*/
+
 @-webkit-keyframes show {
-  0%   { opacity: 0; }
-  100% { opacity: 1; }
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
+
 @-moz-keyframes show {
-  0%   { opacity: 0; }
-  100% { opacity: 1; }
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
+
 @-o-keyframes show {
-  0%   { opacity: 0; }
-  100% { opacity: 1; }
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
+
 @keyframes show {
-  0%   { opacity: 0; }
-  100% { opacity: 1; }
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/***********************NEW CUSTOM *****************************/
+
+#map-toggle,
+#list-toggle {
+    img {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+.block-agent-transaction {
+    //background: #f5f3f3;
+    width: 100%;
+
+    h3 {
+        padding: 10px;
+        font-size: 24px;
+        color: black;
+        font-weight: 600
+    }
+}
+
+.agent-transaction-block {
+    width: 48%;
+    margin: 1%;
+    float: left;
+    background: white;
+    position: relative;
+}
+
+.agent-transaction-block .block-image {
+    width: 120px;
+    height: 120px;
+    float: left;
+    margin-right: 15px;
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.agent-transaction-block .block-street-info {
+    height: 35px;
+}
+
+.agent-transaction-block .block-dir-info {
+    height: 35px;
+    line-height: 35px;
+}
+
+.agent-transaction-block .block-featured {
+    border-bottom: solid 2px black;
+    height: 50px;
+    bottom: 0;
+    left: 120px;
+    > div {
+        height: 50px;
+        line-height: 50px;
+    }
+}
+
+.agent-transaction-block .block-info .block-dir-info {
+    padding-top: 10px;
+}
+
+.siged {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    font-size: 14px; 
+    width: 120px;
+    height: 40px;
+    background-color: rgba(227,124,78,0.9);
+    color: white;
+    line-height: 40px;
+    text-align: center;
 }
 
 /*--------------------- REPONSIVE --------------------------*/
 
+
 /* Smartphones (portrait and landscape) ----------- */
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-/* Styles */
-	#home-content {
-		max-width: 300px
-	}
 
-	#home-listing-group {
-		max-width: 300px;
-	}
-
-	.block-image {
-		height: 190px;
-    	width: 290px;
-	}
-
-	.footer-block2, .footer-block3 {
-		display: none;
-	}
-
-	.footer-block1 {
-		text-align: center;
-	}
-
-    .block-agent-info {
-        width: 98%;   
-    }
-}
-
-@media only screen and (max-width : 480px) { 
-
-    .footer-block2, .footer-block3 {
-        display: none;
-    }
-
-    .footer-block1 {
-        text-align: center;
-    }
-
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    /* Styles */
     #home-content {
-        max-width: 300px;
+        max-width: 300px
     }
-
     #home-listing-group {
         max-width: 300px;
     }
+    .block-image {
+        height: 190px;
+        width: 290px;
+    }
+    .block-agent-single {
+        width: 95%;
+    }
+    .footer-block2,
+    .footer-block3 {
+        display: none;
+    }
+    .footer-block1 {
+        text-align: center;
+    }
+    .block-agent-info {
+        width: 98%;
+    }
+    .agent-transaction-block {
+        width: 100%;
+        margin: 0 auto;
+        float: none;
+        margin-bottom: 25px; 
+    }
 
-    #home-info-action {
+    .agent-transaction-block .block-image {
         display: none;
     }
 
+    .agent-transaction-block .block-street-info, .agent-transaction-block  .block-dir-info{
+        text-align: left;
+    }
+
+    .neighborhood-block {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .page-content { 
+        width: 85%;
+    }
+
+
+}
+
+@media only screen and (max-width: 480px) {
+    .footer-block2,
+    .footer-block3 {
+        display: none;
+    }
+    .footer-block1 {
+        text-align: center;
+    }
+    .block-agent-single {
+        width: 95%;
+    }
+    #home-content {
+        max-width: 300px;
+    }
+    #home-listing-group {
+        max-width: 300px;
+    }
+    #home-info-action {
+        display: none;
+    }
     .group-img-link .link-block {
         width: 100%;
         height: 460px;
     }
-
     .link-block .link-info {
         height: 230px;
         width: 80%;
         margin: 0 auto;
         padding: 10px;
-        margin-top: 115px;    
-
+        margin-top: 115px;
         h3 {
             height: 115px;
             line-height: 115px;
         }
     }
-
     .block-image {
         height: 190px;
         width: 290px;
     }
-
     .block-image {
         height: 190px;
         width: 290px;
     }
-
     .listings_results_column {
         padding: 10px 35px 20px 35px !important;
         width: 100%;
         float: left;
         margin: 0 auto;
     }
-
     .listings_map_column {
         position: relative;
         width: 100%;
@@ -1658,42 +1891,34 @@ button:hover {
             position: relative;
         }
     }
-
     .listings_results_column {
         width: 100%;
         float: left;
     }
-
     .listings_results_column .search-listing-block {
         margin: 20px auto;
         float: none;
     }
-
-    #header-nav, #page-header-nav {
+    #header-nav,
+    #page-header-nav {
         display: none;
     }
-
     #mobile-header-nav-icon {
         display: block;
     }
-
     #mobile-header-nav {
         display: none;
     }
-
     .block-agent-info {
         width: 98%;
         margin: 1%;
     }
-
     .view-toggle {
         display: none;
     }
-
     .search-action-group {
         width: 100%;
     }
-
     .mobile-search-toggle {
         display: inline-block;
         width: 5%;
@@ -1706,28 +1931,25 @@ button:hover {
             width: 100%;
             line-height: 48px;
             cursor: pointer;
-        } 
+        }
     }
-
     .neighborh-search {
         width: 90%;
     }
-
-    .bed-search, .price-search, .more-search {
+    .bed-search,
+    .price-search,
+    .more-search {
         display: none;
         width: 100%;
         text-align: left;
     }
-
     .more-search .dropdown {
         position: none;
     }
-
     .dropdown {
         text-align: left;
         padding-left: 15px;
     }
-
     .more-search .popup {
         position: absolute;
         top: 0;
@@ -1736,7 +1958,6 @@ button:hover {
         right: 0;
         z-index: 3000;
     }
-
     .features-filters {
         max-height: 100%;
         width: 100%;
@@ -1744,163 +1965,155 @@ button:hover {
             display: block;
         }
     }
-
     .block-group {
         width: 98%;
         margin: 20px auto;
     }
-
     .development-block-left {
         width: 100%;
         height: 350px;
     }
-
     .development-block-right {
         width: 100%;
         height: 350px;
     }
-
     .development-block {
         height: 700px;
         margin-bottom: 30px;
     }
-}
+    .agent-transaction-block {
+        width: 100%;
+        margin: 0 auto;
+        float: none;
+        margin-bottom: 25px; 
+    }
 
-/* Smartphones (portrait) ----------- */
-@media only screen and (max-width : 768px)  and (min-width : 480px) {
-/* Styles */
-
-	#home-content {
-		max-width: 300px;
-	}
-
-	#home-listing-group {
-		max-width: 300px;
-	}
-
-    #home-info-action {
+    .agent-transaction-block .block-image {
         display: none;
     }
 
+    .agent-transaction-block .block-street-info, .agent-transaction-block  .block-dir-info{
+        text-align: left;
+    }
+
+    .neighborhood-block {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .page-content { 
+        width: 85%;
+    }
+}
+
+
+/* Smartphones (portrait) ----------- */
+
+@media only screen and (max-width: 768px) and (min-width: 480px) {
+    /* Styles */
+    #home-content {
+        max-width: 300px;
+    }
+    #home-listing-group {
+        max-width: 300px;
+    }
+    #home-info-action {
+        display: none;
+    }
     .group-img-link .link-block {
         width: 100%;
         height: 460px;
     }
-
     .link-block .link-info {
         height: 230px;
         width: 80%;
         margin: 0 auto;
         padding: 10px;
-        margin-top: 115px;    
-
+        margin-top: 115px;
         h3 {
             height: 115px;
             line-height: 115px;
         }
     }
-
-	.block-image {
-		height: 190px;
-    	width: 290px;
-	}
-
-	.footer-block2, .footer-block3 {
-		display: none;
-	}
-
-	.footer-block1 {
-		text-align: center;
-	}
-
+    .block-image {
+        height: 190px;
+        width: 290px;
+    }
+    .footer-block2,
+    .footer-block3 {
+        display: none;
+    }
+    .footer-block1 {
+        text-align: center;
+    }
     .adress-action {
         display: none;
     }
-
     .listing-agent-info {
         max-width: 290px;
         max-height: 650px;
         margin: 0 auto;
         border: 1px solid #e7e8e7;
         background-color: #fff;
-
         img {
             width: 290px;
             height: 290px;
             margin-left: 0px;
         }
-
         div.agent-image {
             padding: 0;
         }
-
         .listing-agent-detail {
             padding: 15px;
         }
     }
-
     .contact-agent-mobile {
         display: block;
         cursor: pointer;
     }
-
     .listings_results_column {
         padding: 10px 35px 20px 35px !important;
         width: 100%;
         float: none;
         margin: 0 auto;
     }
-
     .listings_map_column {
         display: none;
     }
-
     .listings_results_column .search-listing-block {
         margin: 20px auto;
         float: none;
     }
-
     .block-agent-single {
         width: 95%;
     }
-
     .agent-single-listing {
         width: 400px;
     }
-
     .block-agent-single > div {
         text-align: center;
     }
-
-    #header-nav, #page-header-nav {
+    #header-nav,
+    #page-header-nav {
         display: none;
     }
-
     #mobile-header-nav-icon {
         display: block;
     }
-
     #mobile-header-nav {
         display: none;
     }
-
     .block-agent-info {
         width: 48%;
         margin: 1%;
     }
-
     .view-toggle {
         display: none;
     }
-
-    .multi-search-block {
-
-    }
-
+    .multi-search-block {}
     .search-action-group {
         width: 100%;
     }
-
     .mobile-search-toggle {
         display: inline-block;
         width: 5%;
@@ -1913,28 +2126,25 @@ button:hover {
             width: 100%;
             line-height: 48px;
             cursor: pointer;
-        } 
+        }
     }
-
     .neighborh-search {
         width: 90%;
     }
-
-    .bed-search, .price-search, .more-search {
+    .bed-search,
+    .price-search,
+    .more-search {
         display: none;
         width: 100%;
         text-align: left;
     }
-
     .dropdown {
         text-align: left;
         padding-left: 15px;
     }
-
     .more-search .dropdown {
         position: none;
     }
-
     .more-search .popup {
         position: fixed;
         top: 0;
@@ -1943,7 +2153,6 @@ button:hover {
         right: 0;
         z-index: 3000;
     }
-
     .features-filters {
         max-height: 100%;
         width: 100%;
@@ -1951,39 +2160,54 @@ button:hover {
             display: block;
         }
     }
-
-
     .block-group {
         width: 98%;
         margin: 20px auto;
     }
-
     .development-block-left {
         width: 100%;
         height: 350px;
     }
-
     .development-block-right {
         width: 100%;
         height: 350px;
     }
-
     .development-block {
         height: 700px;
         margin-bottom: 30px;
     }
+    .agent-transaction-block {
+        width: 100%;
+        margin: 0 auto;
+        float: none;
+        margin-bottom: 25px; 
+    }
+    .agent-transaction-block .block-street-info, .agent-transaction-block  .block-dir-info{
+        text-align: left;
+    }
 
+    .neighborhood-block {
+        width: 48%;
+        margin: 1%;
+    }
+
+    .page-content { 
+        width: 86%;
+    }
 }
 
-
-@media only screen and (max-width : 1024px) and (min-width : 768px) { 
-
+@media only screen and (max-width: 1024px) and (min-width: 768px) {
     .listings_results_column {
         padding: 10px 35px 20px 35px !important;
         width: 380px;
         float: left;
     }
-
+    .block-agent-single {
+        width: 95%;
+    }
+    .footer-block1 {
+        text-align: center;
+    }
     .listings_map_column {
         position: fixed;
         left: 380px;
@@ -1992,83 +2216,66 @@ button:hover {
         bottom: 0;
         z-index: 100;
     }
-
     #home-content {
         max-width: 680px;
     }
-
     #home-listing-group {
         max-width: 680px;
     }
-
     #home-info-action {
         h1 {
             width: 80%;
         }
     }
-
     .group-img-link .link-block {
         width: 80%;
         margin-left: 10%;
         height: 460px;
     }
-
     .link-block .link-info {
         height: 230px;
         width: 80%;
         margin: 0 auto;
         padding: 10px;
-        margin-top: 115px;    
-
+        margin-top: 115px;
         h3 {
             height: 115px;
             line-height: 115px;
         }
     }
-
     #home-info-action .group-button {
         width: 60%;
     }
-
     #home-info-link {
         width: 90%;
     }
-
     .home-listing-block {
         margin: 15px;
     }
-
     .block-image {
         height: 190px;
         width: 290px;
     }
-
-    #header-nav, #page-header-nav {
+    #header-nav,
+    #page-header-nav {
         display: none;
     }
-
     #mobile-header-nav-icon {
         display: block;
     }
-
     #mobile-header-nav {
         display: none;
-
     }
-
     .block-agent-info {
         width: 31.3333%;
         margin: 1%;
     }
-
     .view-toggle {
         display: none;
     }
-
     .search-action-group {
         width: 100%;
     }
-
     .mobile-search-toggle {
         display: inline-block;
         width: 5%;
@@ -2081,23 +2288,21 @@ button:hover {
             width: 100%;
             line-height: 48px;
             cursor: pointer;
-        } 
+        }
     }
-
     .neighborh-search {
         width: 90%;
     }
-
-    .bed-search, .price-search, .more-search {
+    .bed-search,
+    .price-search,
+    .more-search {
         display: none;
         width: 100%;
         text-align: left;
     }
-
     .more-search .dropdown {
         position: none;
     }
-
     .more-search .popup {
         position: fixed;
         top: 0;
@@ -2106,80 +2311,75 @@ button:hover {
         right: 0;
         z-index: 3000;
     }
-
     .dropdown {
         text-align: left;
         padding-left: 15px;
     }
-
     .features-filters {
         max-height: 100%;
         width: 100%;
-
         img {
             display: block;
         }
     }
-
     .block-group {
         width: 98%;
         margin: 20px auto;
     }
+    
+    .agent-transaction-block {
+        width: 100%;
+        margin: 0 auto;
+        float: none;
+        margin-bottom: 25px; 
+    }
 
 }
 
-@media only screen  and (min-width : 1023px) and (max-width : 1224px) {
+@media only screen and (min-width: 1023px) and (max-width: 1224px) {
     #home-content {
         width: 680px;
     }
-
     #home-listing-group {
         max-width: 680px;
     }
-
     #home-info-action {
         h1 {
             width: 60%;
         }
     }
-
+    .block-agent-single {
+        width: 95%;
+    }
     #home-info-action .group-button {
         width: 40%;
     }
-
     #home-info-link {
         width: 90%;
     }
-
     .home-listing-block {
         margin: 15px;
     }
-
     .block-image {
         height: 190px;
         width: 290px;
     }
-
     .search_filter_secondary {
         padding: 10px 10px 10px 0px;
     }
-
     .listings_results_column {
         padding: 10px 35px 20px 15px !important;
         width: 680px;
         float: left;
     }
-
     .search-listing-block {
         margin-left: 12px;
         margin-right: 12px;
-        margin-bottom: 25px; 
+        margin-bottom: 25px;
     }
-
     .search-listing-block:nth-child(2n) {
         //margin-left: 30px;
     }
-
     .listings_map_column {
         position: fixed;
         left: 670px;
@@ -2188,62 +2388,53 @@ button:hover {
         bottom: 0;
         z-index: 100;
     }
-
     .block-group {
         width: 98%;
         margin: 20px auto;
     }
 }
 
-/* Desktops and laptops ----------- */
-@media only screen  and (min-width : 1224px) {
-	#home-content {
-		width: 1200px;
-	}
 
+/* Desktops and laptops ----------- */
+
+@media only screen and (min-width: 1224px) {
+    #home-content {
+        width: 1200px;
+    }
     #home-info {
         width: 1200px;
         margin: 0 auto;
     }
-
-	#home-listing-group {
-		max-width: 1200px;
-	}
-
+    #home-listing-group {
+        max-width: 1200px;
+    }
     #home-info-action {
         h1 {
             width: 60%;
         }
     }
-
     #home-info-action .group-button {
         width: 40%;
     }
-
     #home-info-link {
         width: 85%;
     }
-
     .home-listing-block {
         margin: 15px;
     }
-
-	.block-image {
-    	height: 380px;
-    	width: 570px;
-	}
-
-	.exclusive-text {
-		max-width: 50%;
-		margin: 0 auto;
-	}
-
+    .block-image {
+        height: 380px;
+        width: 570px;
+    }
+    .exclusive-text {
+        max-width: 50%;
+        margin: 0 auto;
+    }
     .listings_results_column {
         padding: 10px 35px 20px 35px !important;
         width: 990px;
         float: left;
     }
-
     .listings_map_column {
         position: fixed;
         left: 970px;
@@ -2252,15 +2443,12 @@ button:hover {
         bottom: 0;
         z-index: 100;
     }
-
-    .block-agent-single {
+    .block-agent-single, .agent-single, .page-content, .neighborhood-title-head {
         width: 1200px;
     }
-
     .agent-single-listing {
         width: 1200px;
     }
-
     .block-agent-info {
         border: 1px solid #e7e8e7;
         margin-bottom: 5px;
@@ -2271,147 +2459,151 @@ button:hover {
     }
 }
 
-@media only screen and (max-height: 710px) { 
+@media only screen and (max-height: 710px) {
     .listing-silder {
         height: 300px;
     }
 }
 
-
-
 .jssort07 {
-        position: absolute;
-        /* size of thumbnail navigator container */
-        width: 100%;
-        height: 100px;
-    }
-    
-    .jssort07 .p {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 72px;
-        height: 72px;
-    }
-    
-    .jssort07 .i {
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        width: 72px;
-        height: 72px;
-        filter: alpha(opacity=80);
-        opacity: .8;
-    }
-    
-    .jssort07 .p:hover .i,
-    .jssort07 .pav .i {
-        filter: alpha(opacity=100);
-        opacity: 1;
-    }
-    
-    .jssort07 .o {
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        width: 70px;
-        height: 70px;
-        border: 1px solid #000;
-        box-sizing: content-box;
-        transition: border-color .6s;
-        -moz-transition: border-color .6s;
-        -webkit-transition: border-color .6s;
-        -o-transition: border-color .6s;
-    }
-    
-    .jssort07 .pav .o {
-        border-color: #0099ff;
-    }
-    
-    .jssort07 .p:hover .o {
-        border-color: #fff;
-        transition: none;
-        -moz-transition: none;
-        -webkit-transition: none;
-        -o-transition: none;
-    }
-    
-    .jssort07 .p.pdn .o {
-        border-color: #0099ff;
-    }
-    
-    * html .jssort07 .o {
-        /* ie quirks mode adjust */
-        width/**/
-        : 72px;
-        height/**/
-        : 72px;
-    }
-    /* jssor slider bullet navigator skin 13 css */
-    /*
+    position: absolute;
+    /* size of thumbnail navigator container */
+    width: 100%;
+    height: 100px;
+}
+
+.jssort07 .p {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 72px;
+    height: 72px;
+}
+
+.jssort07 .i {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 72px;
+    height: 72px;
+    filter: alpha(opacity=80);
+    opacity: .8;
+}
+
+.jssort07 .p:hover .i,
+.jssort07 .pav .i {
+    filter: alpha(opacity=100);
+    opacity: 1;
+}
+
+.jssort07 .o {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 70px;
+    height: 70px;
+    border: 1px solid #000;
+    box-sizing: content-box;
+    transition: border-color .6s;
+    -moz-transition: border-color .6s;
+    -webkit-transition: border-color .6s;
+    -o-transition: border-color .6s;
+}
+
+.jssort07 .pav .o {
+    border-color: #0099ff;
+}
+
+.jssort07 .p:hover .o {
+    border-color: #fff;
+    transition: none;
+    -moz-transition: none;
+    -webkit-transition: none;
+    -o-transition: none;
+}
+
+.jssort07 .p.pdn .o {
+    border-color: #0099ff;
+}
+
+* html .jssort07 .o {
+    /* ie quirks mode adjust */
+    width/**/
+    : 72px;
+    height/**/
+    : 72px;
+}
+
+
+/* jssor slider bullet navigator skin 13 css */
+
+
+/*
         .jssorb13 div           (normal)
         .jssorb13 div:hover     (normal mouseover)
         .jssorb13 .av           (active)
         .jssorb13 .av:hover     (active mouseover)
         .jssorb13 .dn           (mousedown)
         */
-    
-    .jssorb13 {
-        position: absolute;
-    }
-    
-    .jssorb13 div,
-    .jssorb13 div:hover,
-    .jssorb13 .av {
-        position: absolute;
-        /* size of bullet elment */
-        width: 21px;
-        height: 21px;
-        background: url('img/b13.png') no-repeat;
-        overflow: hidden;
-        cursor: pointer;
-    }
-    
-    .jssorb13 div {
-        background-position: -5px -5px;
-    }
-    
-    .jssorb13 div:hover,
-    .jssorb13 .av:hover {
-        background-position: -35px -5px;
-    }
-    
-    .jssorb13 .av {
-        background-position: -65px -5px;
-    }
-    
-    .jssorb13 .dn,
-    .jssorb13 .dn:hover {
-        background-position: -95px -5px;
-    }
-    
-    .jssora03l {
-        display: block;
-        position: absolute;
-        /* size of arrow element */
-        width: 55px;
-        height: 55px;
-        cursor: pointer;
-        background: url(../images/arrow-left.png) no-repeat;
-        overflow: hidden;
-    }
-    
-    .jssora03r {
-        display: block;
-        position: absolute;
-        /* size of arrow element */
-        width: 55px;
-        height: 55px;
-        cursor: pointer;
-        background: url(../images/arrow-right.png) no-repeat;
-        overflow: hidden;
-    }
-    /*
+
+.jssorb13 {
+    position: absolute;
+}
+
+.jssorb13 div,
+.jssorb13 div:hover,
+.jssorb13 .av {
+    position: absolute;
+    /* size of bullet elment */
+    width: 21px;
+    height: 21px;
+    background: url('img/b13.png') no-repeat;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.jssorb13 div {
+    background-position: -5px -5px;
+}
+
+.jssorb13 div:hover,
+.jssorb13 .av:hover {
+    background-position: -35px -5px;
+}
+
+.jssorb13 .av {
+    background-position: -65px -5px;
+}
+
+.jssorb13 .dn,
+.jssorb13 .dn:hover {
+    background-position: -95px -5px;
+}
+
+.jssora03l {
+    display: block;
+    position: absolute;
+    /* size of arrow element */
+    width: 55px;
+    height: 55px;
+    cursor: pointer;
+    background: url(../images/arrow-left.png) no-repeat;
+    overflow: hidden;
+}
+
+.jssora03r {
+    display: block;
+    position: absolute;
+    /* size of arrow element */
+    width: 55px;
+    height: 55px;
+    cursor: pointer;
+    background: url(../images/arrow-right.png) no-repeat;
+    overflow: hidden;
+}
+
+
+/*
             .jssora03l { background-position: -3px -33px; }
             .jssora03r { background-position: -63px -33px; }
             .jssora03l:hover { background-position: -123px -33px; }

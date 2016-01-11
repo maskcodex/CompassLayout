@@ -112,7 +112,7 @@
                         </div>
                         <div class="col-sm-6">
                             <div class="adress-action">
-                                <p>View Map</p>
+                                <p id"listing-view-map" onclick="viewmap()">View Map</p>
                                 <button>Contact Agent</button>
                             </div>
                         </div>
@@ -295,9 +295,8 @@
     $(document).ready(function() {
         // None of the options are set
         $("div#makeMeScrollable").smoothDivScroll({
-            autoScrollingMode: "onStart",
-            hotSpotScrolling: true,
-            touchScrolling: true,
+            hotSpotScrolling: false,
+            touchScrolling: false,
             manualContinuousScrolling: false,
             mousewheelScrolling: false
         });
