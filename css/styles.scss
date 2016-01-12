@@ -255,10 +255,28 @@ button:hover {
         padding-right: 20px;
         cursor: pointer;
         box-sizing: border-box;
+        position: relative;
     }
     ul li:hover {
         border-bottom: solid 2px #fff;
         color: #ccc;
+    }
+
+    ul li:hover ul.sub-menu {
+        display: block;
+    }
+
+    ul.sub-menu {
+        position: absolute;
+        left: 0;
+        top: 80px;
+        display: none;
+
+        li {
+            height: 35px;
+            line-height: 35px;
+            float: none;
+        }
     }
 }
 
@@ -1866,6 +1884,7 @@ button:hover {
 .form .agent-contact-img {
     width: 40%;
     padding-top: 15px;
+    margin: auto;
 
     img {
         width: 100%;
