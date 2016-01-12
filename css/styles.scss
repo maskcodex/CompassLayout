@@ -264,18 +264,27 @@ button:hover {
 
     ul li:hover ul.sub-menu {
         display: block;
+        transition-duration: 200ms;
     }
 
     ul.sub-menu {
         position: absolute;
-        left: 0;
-        top: 80px;
+        left: -75px;
+        top: 78px;
         display: none;
+        background: rgba(0,0,0,.5);
+        min-width: 300px;
 
         li {
             height: 35px;
             line-height: 35px;
             float: none;
+            color: white;
+        }
+
+        li:hover {
+            color: #999;
+            border: none;
         }
     }
 }

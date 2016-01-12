@@ -234,16 +234,23 @@ button:hover, .blue-button:hover {
     border-bottom: solid 2px #fff;
     color: #ccc; }
   #header-nav ul li:hover ul.sub-menu, #page-header-nav ul li:hover ul.sub-menu {
-    display: block; }
+    display: block;
+    transition-duration: 200ms; }
   #header-nav ul.sub-menu, #page-header-nav ul.sub-menu {
     position: absolute;
-    left: 0;
-    top: 80px;
-    display: none; }
+    left: -75px;
+    top: 78px;
+    display: none;
+    background: rgba(0, 0, 0, 0.5);
+    min-width: 300px; }
     #header-nav ul.sub-menu li, #page-header-nav ul.sub-menu li {
       height: 35px;
       line-height: 35px;
-      float: none; }
+      float: none;
+      color: white; }
+    #header-nav ul.sub-menu li:hover, #page-header-nav ul.sub-menu li:hover {
+      color: #999;
+      border: none; }
 
 #page-header-nav ul li:hover {
   border-bottom: solid 2px black;
