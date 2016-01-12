@@ -2,7 +2,7 @@
   box-sizing: border-box; }
 
 body {
-  background: #e3e3e3;
+  background: #f3f3f3;
   -webkit-font-smoothing: antialiased;
   font-family: 'Roboto', Helvetica, Arial, sans-serif; }
 
@@ -1490,6 +1490,154 @@ button:hover, .blue-button:hover {
   color: white;
   line-height: 40px;
   text-align: center; }
+
+/********************** FORM -------------------------------*/
+.form, #loginform {
+  max-width: 313px;
+  width: 100%;
+  margin: 10px auto;
+  padding: 15px;
+  background-color: #fff;
+  text-align: center; }
+  .form input, #loginform input {
+    width: 96%;
+    margin: 10px auto;
+    height: 26px;
+    border: none;
+    border-bottom: solid 1px #ccc; }
+  .form textarea, #loginform textarea {
+    width: 96%;
+    margin: 10px auto;
+    height: 26px;
+    border: none;
+    min-height: 100px;
+    text-align: left; }
+  .form input:focus, #loginform input:focus {
+    outline: none;
+    border-bottom: solid 1px black; }
+  .form input[type="submit"], #loginform input[type="submit"] {
+    padding: 10px;
+    background: black;
+    height: 40px;
+    color: white;
+    border-radius: 3px; }
+
+.form-header {
+  height: 55px;
+  position: relative;
+  background-color: #f3f3f3;
+  text-align: left;
+  margin: -15px -15px 0 -15px;
+  padding: 15px; }
+  .form-header p {
+    font-size: 18px;
+    font-style: normal;
+    font-family: 'Harmonia Sans',Helvetica,Arial,sans-serif;
+    font-weight: 600;
+    font-style: normal; }
+
+.cancel-form {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  right: 10px;
+  top: 10px; }
+  .cancel-form img {
+    width: 100%; }
+
+.form-footer {
+  height: 55px;
+  position: relative;
+  text-align: left;
+  margin-top: 25px;
+  padding: 15px;
+  border-top: solid 1px #ccc;
+  color: #666; }
+  .form-footer a {
+    color: black;
+    text-decoration: underline; }
+
+.form .agent-contact-img {
+  width: 40%;
+  padding-top: 15px; }
+  .form .agent-contact-img img {
+    width: 100%; }
+
+.form .contact-agent-name {
+  color: black;
+  font-weight: bold; }
+
+/*--------------------- CUSTOMER --------------------------*/
+.my-home-head {
+  margin-top: 50px; }
+
+.my-home-head .my-home-title {
+  font-size: 36px;
+  font-weight: bold;
+  height: 150px;
+  line-height: 150px; }
+
+.agent-selected-block {
+  background: white;
+  border-bottom: solid 1px #ccc;
+  border-right: solid 1px #ccc;
+  border-top: solid 1px #ccc; }
+
+.my-home-menu {
+  background: white;
+  padding: 0;
+  margin: 0; }
+  .my-home-menu ul {
+    padding: 0;
+    margin: 0; }
+  .my-home-menu ul li {
+    height: 70px;
+    line-height: 50px;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    padding: 10px;
+    font-family: 'Roboto', Helvetica, Arial, sans-serif; }
+  .my-home-menu ul li.activated {
+    background: #ebebeb; }
+
+.my-home-content {
+  background: #ebebeb; }
+
+.no-search {
+  text-align: center;
+  max-width: 530px;
+  margin: 30px auto 0 auto; }
+  .no-search h3 {
+    font-size: 40px;
+    font-family: 'Harmonia Sans', Helvetica, Arial, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    margin-bottom: 30px;
+    line-height: 40px; }
+  .no-search p {
+    font-family: 'Roboto', Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 28px;
+    color: #848484;
+    margin-top: 20px; }
+
+.no-agent-selected h4 {
+  font-size: 24px;
+  font-family: 'Tiempos Text', Times, 'Times New Roman', serif;
+  font-weight: 400;
+  font-style: normal; }
+.no-agent-selected p {
+  font-family: 'Tiempos Text', Times, 'Times New Roman', serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 28px; }
+
+.my-home-frame {
+  display: none; }
 
 /*--------------------- REPONSIVE --------------------------*/
 /* Smartphones (portrait and landscape) ----------- */

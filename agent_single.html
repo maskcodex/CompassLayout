@@ -8,7 +8,7 @@
     <meta name="author" content="SitePoint">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css?v=1.0">
-<!--script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <!--[if lt IE 9]>
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
@@ -44,7 +44,7 @@
                     <p>Licensed Real Estate Salesperson</p>
                     <p>mburns@compass.com</p>
                     <p class="mobile-text">M: 631.901.3258</p>
-                    <button>
+                    <button data-toggle="modal" data-target="#contact-agent">
                         Work with Matt Burns
                     </button>
                 </div>
@@ -115,7 +115,7 @@
             </div>
             <div class="wrap-single">
                 <div class="block-agent-single" style="text-align:center">
-                    <button class="light-button">
+                    <button class="light-button" data-toggle="modal" data-target="#sign-up-modal">
                         Work with Matt Burns
                     </button>
                 </div>
@@ -153,8 +153,61 @@
                         </div>
                     </div>
                 </div>
+            </div>  
+            <div class="modal fade" id="sign-up-modal">
+                <form id="sign-up-form" class="form">
+                    <div class="form-header">
+                        <p>Sign up</p>
+                        <div class="cancel-form"><img class="close" data-dismiss="modal" src="images/cancel-icon-dark.png"></div>
+                    </div>
+                    <div class="form-content">
+                        <input type="text" name="first-name" placeholder="First Name">
+                        <input type="text" name="last-name" placeholder="Last Name">
+                        <input type="email" name="email" placeholder="Email">
+                        <input type="password" name="password" placeholder="Password">
+                        <input type="submit" value="Sign up">
+                    </div>
+                    <div class="form-footer">
+                        Already have an account? <a href="#">Sign in</a>
+                    </div>
+                </form>
+            </div>
+
+            <div class="modal fade" id="login-modal">
+                <form id="login-form" class="form">
+                    <div class="form-header">
+                        <p>Login</p>
+                        <div class="cancel-form"><img class="close" data-dismiss="modal" src="images/cancel-icon-dark.png"></div>
+                    </div>
+                    <div class="form-content">
+                        <input type="email" name="email" placeholder="Email">
+                        <input type="password" name="password" placeholder="Password">
+                        <input type="submit" value="Login">
+                    </div>
+                    <div class="form-footer">
+                        New to Compass? <a href="#">Create an account</a>
+                    </div>
+                </form>
+            </div>
+
+            <div class="modal fade" id="contact-agent">
+                <form id="contact-agent-form" class="form">
+                    <div class="form-header">
+                        <p>Work with Agent</p>
+                        <div class="cancel-form"><img class="close" data-dismiss="modal" src="images/cancel-icon-dark.png"></div>
+                    </div>
+                    <div class="form-content">
+                        <img class="agent-contact-img" src="images/agent-contact.jpg"/>
+                        <p class="contact-agent-name">Christina Abad</p>
+                        <p>Licensed Associate Real Estate Broker</p>
+                        <input type="text" name="email" placeholder="Your phone number">
+                        <textarea name="contact-option" placeholder="Optinal message" ></textarea>
+                    </div>
+                    <div class="form-footer">
+                        <input type="submit" value="Submit to Agent">
+                    </div>
+                </form>
             </div>
             <script src="js/bootstrap.min.js"></script>
 </body>
-
 </html>

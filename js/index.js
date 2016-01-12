@@ -99,6 +99,24 @@ $(document).ready(function() {
         });
     });
 
+    $(".my-home-menu li").click(function(event) {
+        var clicked = $(this);
+        var frame = clicked.attr('id');
+        $(".my-home-menu li").each(function() {
+            $(this).removeClass("activated");
+        });
+
+        clicked.addClass("activated");
+
+        $(".my-home-frame").each(function() {
+            if ($(this).attr('for') !== frame) {
+                $(this).fadeOut("fast");
+            } else {
+                $(this).fadeIn("fast");
+            }
+        });
+    });
+
     $(".mobile-search-toggle").click(function(){
         var text = $(".mobile-search-toggle label").text() === "+" ? "x" : "+";
         $(".price-search").toggle();
